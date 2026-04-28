@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunas Herbal - Solusi Herbal Keluarga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        .modal-active { display: flex !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-teal-600 text-white py-2 px-4 text-center text-sm">
+        <p>Gratis Ongkir untuk pembelian di atas Rp 150.000! | Hubungi Kami: <a href="tel:+6289637737721" class="font-bold underline">0896-3773-7721</a></p>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="cross" class="text-teal-600 fill-teal-600"></i>
+                <h1 class="text-2xl font-bold text-teal-700">Tunas<span class="text-gray-800">Herbal</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#" class="hover:text-teal-600">Beranda</a>
+                <a href="#produk" class="hover:text-teal-600">Produk</a>
+                <a href="#layanan" class="hover:text-teal-600">Layanan</a>
+                <a href="#kontak" class="hover:text-teal-600">Kontak</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleCart()" class="relative p-2 hover:bg-gray-100 rounded-full">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count" class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <button class="md:hidden p-2">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-teal-50 py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
+                    Kesehatan Anda, <br><span class="text-teal-600">Prioritas Utama Kami</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#produk" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">Belanja Sekarang</a>
+                    <a href="https://wa.me/6289637737721" class="bg-white border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition"> Kolom Konsultasi </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
+                <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
+alt="TUNAS HERBAL"
+class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-80 md:h-96"
+onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="bg-white py-8 border-b">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto flex items-center bg-gray-100 rounded-xl p-2 px-4 border focus-within:border-teal-500 transition">
+                <i data-lucide="search" class="text-gray-400"></i>
+                <input type="text" id="productSearch" onkeyup="filterProducts()" placeholder="Cari produk herbal dan jenis madu..." class="bg-transparent border-none focus:ring-0 w-full px-4 py-2">
+            </div>
+        </div>
+    </section>
+
+    <!-- PERBAIKAN BAGIAN PRODUCTS SECTION -->
+
+<section id="produk" class="py-16 container mx-auto px-4">
+    <div class="flex justify-between items-end mb-10">
+        <div>
+            <h3 class="text-3xl font-bold mb-2">Produk Terpopuler</h3>
+            <p class="text-gray-600">Pilihan terbaik untuk kesehatan keluarga Anda</p>
+        </div>
+        <div class="hidden md:block">
+            <span class="text-teal-600 font-semibold cursor-pointer">Lihat Semua →</span>
+        </div>
+    </div>
+
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 500 gram madu kalimantan">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-500g.png"
+alt="Madu Gholiban 500 gram"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
+                <h4 class="text-lg font-bold mt-2">Madu Gholiban 500 gram</h4>
+                <p class="text-sm text-gray-500 mb-4">Madu Kalimantan murni untuk segala kebutuhan.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 35.000</p>
+            </div>
+            <button onclick="addToCart('Madu Gholiban 500 gram', 35000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 1 kg madu kalimantan">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+alt="Madu Gholiban 1 kg"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
+                <h4 class="text-lg font-bold mt-2">Madu Gholiban 1 kg</h4>
+                <p class="text-sm text-gray-500 mb-4">Madu Kalimantan murni untuk segala kebutuhan.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
+            </div>
+            <button onclick="addToCart('Madu Gholiban 1 kg', 50000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Assamulin kapsul otot sendi">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
+alt="Assamulin"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Herbal</span>
+                <h4 class="text-lg font-bold mt-2">Assamulin</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 30 kapsul. Menjaga kesehatan otot dan sendi.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 65.000</p>
+            </div>
+            <button onclick="addToCart('Assamulin', 65000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Super Top Libido STL stamina pria">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
+alt="STL"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
+                <h4 class="text-lg font-bold mt-2">Super Top Libido (STL)</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 4 kapsul. Menambah stamina pria dan durasi.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
+            </div>
+            <button onclick="addToCart('Super Top Libido (STL)', 50000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Kopi JANTAN ORIGINAL stamina pria">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
+alt="Kopi Jantan"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
+                <h4 class="text-lg font-bold mt-2">Kopi JANTAN ORIGINAL</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 1 sachet. Menambah stamina dan durasi.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 15.000</p>
+            </div>
+            <button onclick="addToCart('Kopi JANTAN ORIGINAL', 15000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Lambung Asyifa lambung pencernaan">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+alt="Lambung Asyifa"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                <h4 class="text-lg font-bold mt-2">Madu Lambung Asyifa</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 280 gram. Membantu lambung dan pencernaan.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 45.000</p>
+            </div>
+            <button onclick="addToCart('Madu Lambung Asyifa', 45000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Angkak Darusyifa trombosit tipes dbd">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+alt="Madu Angkak Darusyifa"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                <h4 class="text-lg font-bold mt-2">Madu Angkak Darusyifa</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 470 gram. Membantu menambah trombosit.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
+            </div>
+            <button onclick="addToCart('Madu Angkak Darusyifa', 50000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Batuk BATGUR batuk pilek demam">
+            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-batgur.png"
+alt="Madu Batgur"
+class="w-full h-64 object-cover rounded-lg mb-4">
+            <div class="flex-grow">
+                <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                <h4 class="text-lg font-bold mt-2">Madu Batuk BATGUR</h4>
+                <p class="text-sm text-gray-500 mb-4">Isi 280 gram. Untuk batuk, pilek, demam dan stamina.</p>
+                <p class="text-teal-700 font-bold text-xl">Rp 35.000</p>
+            </div>
+            <button onclick="addToCart('Madu Batuk BATGUR', 35000)" class="mt-4 w-full bg-teal-600 text-white py-2 rounded-lg hover:bg-teal-700 transition">Tambah</button>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Services Info -->
+    <section id="layanan" class="bg-teal-700 py-16 text-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="flex flex-col items-center">
+                <div class="bg-teal-600 p-4 rounded-full mb-4">
+                    <i data-lucide="truck" class="w-8 h-8"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-2">Pengiriman Cepat</h5>
+                <p class="text-teal-100">Layanan pengantaran 1 jam sampai untuk area dalam kota.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="bg-teal-600 p-4 rounded-full mb-4">
+                    <i data-lucide="shield-check" class="w-8 h-8"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-2">Produk 100% Asli</h5>
+                <p class="text-teal-100">Semua produk kami terjamin keasliannya dan terdaftar di BPOM.</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="bg-teal-600 p-4 rounded-full mb-4">
+                    <i data-lucide="user-check" class="w-8 h-8"></i>
+                </div>
+                <h5 class="text-xl font-bold mb-2">Konsultasi Gratis</h5>
+                <p class="text-teal-100">Tanyakan keluhan Anda kepada kami melalui WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i data-lucide="cross" class="text-teal-500 fill-teal-500"></i>
+                        <h1 class="text-2xl font-bold text-white">Tunas<span class="text-teal-500">Herbal</span></h1>
+                    </div>
+                    <p class="mb-6">Kesehatan Anda Adalah Tujuan Utama Kami. Melayani dengan hati untuk masyarakat sehat.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-white transition"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="hover:text-white transition"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="hover:text-white transition"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Tautan Cepat</h6>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="hover:text-teal-500 transition">Tentang Kami</a></li>
+                        <li><a href="#" class="hover:text-teal-500 transition">Produk Terbaru</a></li>
+                        <li><a href="#" class="hover:text-teal-500 transition">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-teal-500 transition">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Metode Pembayaran</h6>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="bg-gray-800 p-2 rounded text-xs text-center">BCA</div>
+                        <div class="bg-gray-800 p-2 rounded text-xs text-center">Mandiri</div>
+                        <div class="bg-gray-800 p-2 rounded text-xs text-center">Gopay</div>
+                        <div class="bg-gray-800 p-2 rounded text-xs text-center">OVO</div>
+                        <div class="bg-gray-800 p-2 rounded text-xs text-center">ShopeePay</div>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6">Hubungi Kami</h6>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+    <a href="https://maps.app.goo.gl/T8sVZ8ED1F5mfVoF7"
+       target="_blank"
+       class="flex items-start gap-3 hover:text-teal-400 transition">
+
+        <i data-lucide="map-pin" class="text-teal-500 shrink-0 mt-1"></i>
+
+        <span>
+            Jl. Raya Jagawana, depan Masjid Jamie Al-Wasilah RT:03 RW:05,
+            Ds. Sukarukun, Kec. Sukatani, Kabupaten Bekasi,
+            Jawa Barat 17630
+        </span>
+
+    </a>
+    </li>
+<li class="flex items-center gap-3">
+    <i data-lucide="phone" class="text-teal-500 shrink-0"></i>
+
+    <a href="https://wa.me/6289637737721"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="hover:text-teal-400 transition">
+       0896-3773-7721
+    </a>
+</li>
+                        <li class="flex items-center gap-3">
+    <i data-lucide="mail" class="text-teal-500 shrink-0"></i>
+
+    <a href="https://www.instagram.com/tunasherbal123?igsh=dW9zc2NkbHh2Y3o0"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="hover:text-teal-400 transition">
+       @tunasherbal123
+    </a>
+</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Tunas Herbal. Semua Hak Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b flex justify-between items-center bg-teal-600 text-white">
+                <h3 class="text-xl font-bold flex items-center gap-2">
+                    <i data-lucide="shopping-bag"></i> Keranjang Belanja
+                </h3>
+                <button onclick="toggleCart()" class="text-white hover:text-gray-200">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4">
+                <!-- Cart items dynamically added here -->
+                <p id="empty-cart-msg" class="text-center text-gray-500 py-10">Keranjang Anda masih kosong.</p>
+            </div>
+            <div id="cart-footer" class="p-6 border-t bg-gray-50 hidden">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-gray-600 font-medium">Total Estimasi</span>
+                    <span id="cart-total" class="text-2xl font-bold text-teal-700">Rp 0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-green-600 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle"></i> Pesan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Message Box -->
+    <div id="notif-box" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[200] bg-teal-800 text-white px-6 py-3 rounded-full shadow-lg hidden">
+        Produk ditambahkan ke keranjang!
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Cart State
+        let cart = [];
+        let total = 0;
+
+        function toggleCart() {
+    const modal = document.getElementById('cart-modal');
+    modal.classList.toggle('hidden');
+    modal.classList.toggle('flex');
+}
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            showNotification(`${name} ditambahkan!`);
+        }
+
+        function updateCartUI() {
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartTotal = document.getElementById('cart-total');
+    const cartFooter = document.getElementById('cart-footer');
+
+    cartItems.innerHTML = '';
+    total = 0;
+    let totalItems = 0;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = `<p class="text-center text-gray-500 py-10">Keranjang Anda masih kosong.</p>`;
+        cartFooter.classList.add('hidden');
+    } else {
+        cartFooter.classList.remove('hidden');
+
+        cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+            totalItems += item.quantity;
+
+            cartItems.innerHTML += `
+                <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border mb-3">
+                    <div class="w-2/3">
+                        <h5 class="font-bold text-gray-800">${item.name}</h5>
+                        <p class="text-sm text-gray-500">${item.quantity} x Rp ${item.price.toLocaleString('id-ID')}</p>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty(${index}, -1)" class="bg-gray-200 px-2 py-1 rounded">-</button>
+                        <span class="font-bold">${item.quantity}</span>
+                        <button onclick="changeQty(${index}, 1)" class="bg-gray-200 px-2 py-1 rounded">+</button>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    cartCount.innerText = totalItems;
+    cartTotal.innerText = `Rp ${total.toLocaleString('id-ID')}`;
+lucide.createIcons();
+}
+
+        function changeQty(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('productSearch').value.toLowerCase();
+            const products = document.querySelectorAll('.product-card');
+            
+            products.forEach(product => {
+                const name = product.getAttribute('data-name').toLowerCase();
+                if (name.includes(query)) {
+                    product.style.display = 'flex';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        function showNotification(msg) {
+            const notif = document.getElementById('notif-box');
+            notif.innerText = msg;
+            notif.classList.remove('hidden');
+            setTimeout(() => {
+                notif.classList.add('hidden');
+            }, 2000);
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) return;
+
+            let message = "Halo Tunas Herbal, saya ingin memesan:\n\n";
+            cart.forEach(item => {
+                message += `- ${item.name} (${item.quantity}x)\n`;
+            });
+            message += `\n*Total: Rp ${total.toLocaleString('id-ID')}*\n\nMohon informasi pembayarannya. Terima kasih!`;
+            
+            const encodedMsg = encodeURIComponent(message);
+            window.open(`https://wa.me/6289637737721?text=${encodedMsg}`, '_blank');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('cart-modal');
+            if (event.target == modal) {
+                toggleCart();
+            }
+        }
+    </script>
+</body>
+</html>

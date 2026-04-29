@@ -265,9 +265,15 @@ class="w-full h-64 object-cover rounded-lg mb-4">
                 <div>
                     <h6 class="text-white font-bold mb-6">Metode Pembayaran</h6>
                     <div class="grid grid-cols-3 gap-2">
-                        <div class="bg-gray-800 p-2 rounded text-xs text-center">BCA</div>
-                        <div class="bg-gray-800 p-2 rounded text-xs text-center">Mandiri</div>
-                        <div class="bg-gray-800 p-2 rounded text-xs text-center">Gopay</div>
+                        <div onclick="navigator.clipboard.writeText('3432245923'); alert('Nomor BCA disalin: 3432245923');" class="bg-gray-800 p-2 rounded text-xs text-center cursor-pointer hover:bg-gray-700">
+  BCA
+</div>
+                        <div onclick="navigator.clipboard.writeText('725801009447508'); alert('Nomor BRI disalin: 725801009447508');" class="bg-gray-800 p-2 rounded text-xs text-center cursor-pointer hover:bg-gray-700">
+  BRI
+</div>
+                        <div onclick="navigator.clipboard.writeText('089637737721'); alert('Nomor DANA disalin: 089637737721');" class="bg-gray-800 p-2 rounded text-xs text-center cursor-pointer hover:bg-gray-700">
+  DANA
+</div>
                         <div class="bg-gray-800 p-2 rounded text-xs text-center">OVO</div>
                         <div class="bg-gray-800 p-2 rounded text-xs text-center">ShopeePay</div>
                     </div>

@@ -6,6 +6,7 @@
     <title>Tunas Herbal - Solusi Herbal Keluarga</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -27,13 +28,64 @@
     border-radius: 6px;
     margin-bottom: 4px;
 }
+@keyframes pop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.arrow-guide {
+    position: absolute;
+    top: 50%;
+    font-size: 26px;
+    color: #0d9488;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* kiri */
+.arrow-left {
+    left: -90px;
+    transform: translateY(-50%);
+    animation: moveInLeft 1.2s infinite ease-in-out;
+}
+
+/* kanan */
+.arrow-right {
+    right: -90px;
+    transform: translateY(-50%);
+    animation: moveInRight 1.2s infinite ease-in-out;
+}
+
+/* animasi */
+@keyframes moveInLeft {
+    0% { transform: translate(0, -50%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(-8px, -50%); opacity: 0; }
+}
+
+@keyframes moveInRight {
+    0% { transform: translate(0, -50%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(8px, -50%); opacity: 0; }
+}
+
+@keyframes moveInLeft {
+    0% { transform: translate(0, -50%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(-8px, -50%); opacity: 0; }
+}
+
+@keyframes moveInRight {
+    0% { transform: translate(0, -50%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translate(8px, -50%); opacity: 0; }
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Top Bar -->
     <div class="bg-teal-600 text-white py-2 px-4 text-center text-sm">
-        <p>Gratis Ongkir untuk pembelian di atas Rp 150.000! | Hubungi Kami: <a href="tel:+6289637737721" class="font-bold underline">0896-3773-7721</a></p>
+        <p>Layanan Pengiriman Aktif Untuk Semua Pesanan | Hubungi Kami: <a href="tel:+6289637737721" class="font-bold underline">0896-3773-7721</a></p>
     </div>
 
     <!-- Header -->
@@ -117,11 +169,21 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
     </section>
 
     <!-- PERBAIKAN BAGIAN PRODUCTS SECTION -->
-<div class="text-center py-10">
-    <button onclick="openCategoryModal()"
-        class="bg-teal-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-teal-700 transition">
-        Pilih Produk
-    </button>
+<div class="py-10 flex justify-center relative">
+    
+    <div class="relative inline-block">
+        
+        <div class="arrow-guide arrow-left">❯❯❯❯❯</div>
+
+        <button onclick="openCategoryModal()"
+            class="bg-teal-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-teal-700 transition">
+            Pilih Produk
+        </button>
+
+        <div class="arrow-guide arrow-right">❮❮❮❮❮</div>
+
+    </div>
+
 </div>
 
 <div id="category-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -149,7 +211,7 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             </button>
             
             <button onclick="filterCategory('Produk Minyak')" class="w-full bg-yellow-100 hover:bg-yellow-200 p-3 rounded-lg font-semibold">
-        🛢️ Produk Minyak
+        🫒 Produk Minyak
             </button>
     
             <button onclick="filterCategory('all')" class="w-full bg-gray-200 hover:bg-gray-300 p-3 rounded-lg font-semibold">
@@ -527,11 +589,11 @@ onclick="openProductModal(this)">
                 <div>
                     <h6 class="text-white font-bold mb-6">Tautan Cepat</h6>
                     <ul class="space-y-4">
-                        <li><a href="#" class="hover:text-teal-500 transition">Tentang Kami</a></li>
-                        <li><a href="#" class="hover:text-teal-500 transition">Produk Terbaru</a></li>
-                        <li><a href="#" class="hover:text-teal-500 transition">Syarat & Ketentuan</a></li>
-                        <li><a href="#" class="hover:text-teal-500 transition">Kebijakan Privasi</a></li>
-                    </ul>
+    <li><a onclick="openInfo('about')" class="hover:text-teal-500 transition cursor-pointer">Tentang Kami</a></li>
+    <li><a onclick="openInfo('product')" class="hover:text-teal-500 transition cursor-pointer">Produk Terbaru</a></li>
+    <li><a onclick="openInfo('terms')" class="hover:text-teal-500 transition cursor-pointer">Syarat & Ketentuan</a></li>
+    <li><a onclick="openInfo('privacy')" class="hover:text-teal-500 transition cursor-pointer">Kebijakan Privasi</a></li>
+</ul>
                 </div>
                 <div>
                     <h6 class="text-white font-bold mb-6">Metode Pembayaran</h6>
@@ -752,7 +814,7 @@ syncProductUI();
         message += `- ${item.name} (${item.quantity}x)\n`;
     });
 
-    message += `\n*Total: Rp ${total.toLocaleString('id-ID')}*`;
+    message += `\n*Total: Rp ${total.toLocaleString('id-ID')}*\n\nMohon informasi pembayarannya. Terima kasih!`;
 
     const encodedMsg = encodeURIComponent(message);
     window.open(`https://wa.me/6289637737721?text=${encodedMsg}`, '_blank');
@@ -1007,6 +1069,40 @@ function closeAsliModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
 }
+function openInfo(type) {
+    const modal = document.getElementById('info-modal');
+
+    const data = {
+        about: {
+            title: "Tentang Kami",
+            desc: "Tunas Herbal adalah toko herbal terpercaya yang menyediakan produk kesehatan alami untuk keluarga Indonesia dengan kualitas terjamin."
+        },
+        product: {
+            title: "Produk Terbaru",
+            desc: "Kami selalu menghadirkan produk herbal dan madu terbaru yang berkualitas, aman, dan sudah melalui seleksi ketat."
+        },
+        terms: {
+            title: "Syarat & Ketentuan",
+            desc: "Dengan menggunakan layanan kami, Anda menyetujui syarat penggunaan, termasuk ketentuan pembelian, pengiriman, dan pengembalian."
+        },
+        privacy: {
+            title: "Kebijakan Privasi",
+            desc: "Kami menjaga data pelanggan dengan aman dan tidak membagikannya kepada pihak ketiga tanpa izin."
+        }
+    };
+
+    document.getElementById('info-title').innerText = data[type].title;
+    document.getElementById('info-desc').innerText = data[type].desc;
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeInfo() {
+    const modal = document.getElementById('info-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -1078,4 +1174,15 @@ class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-fu
     </div>
 </div>
 </body>
+<div id="info-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative animate-[pop_0.25s_ease]">
+
+        <button onclick="closeInfo()" 
+            class="absolute top-3 right-3 bg-gray-200 w-8 h-8 rounded-full">✕</button>
+
+        <h3 id="info-title" class="text-xl font-bold mb-3 text-teal-700"></h3>
+        <p id="info-desc" class="text-gray-600 text-sm leading-relaxed"></p>
+
+    </div>
+</div>
 </html>

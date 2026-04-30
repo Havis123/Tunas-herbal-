@@ -129,7 +129,9 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
         <h2 class="text-xl font-bold mb-6 text-teal-600">Menu</h2>
 
         <a href="#" class="block py-2 hover:text-teal-600">Beranda</a>
-        <a href="#produk" class="block py-2 hover:text-teal-600">Produk</a>
+        <a href="javascript:void(0)" onclick="scrollToPilihProduk()" class="block py-2 hover:text-teal-600">
+    Produk
+</a>
         <a href="#layanan" class="block py-2 hover:text-teal-600">Layanan</a>
         <a href="#kontak" class="block py-2 hover:text-teal-600">Kontak</a>
 
@@ -144,8 +146,13 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                 </h2>
                 <p class="text-lg text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#produk" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">Belanja Sekarang</a>
-                    <a href="https://wa.me/6289637737721" class="bg-white border-2 border-teal-600 text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-teal-50 transition"> Kolom Konsultasi </a>
+                    <button onclick="scrollToPilihProduk()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
+    Belanja Sekarang
+</button>
+                   <h5 class="text-xl font-bold mb-2 cursor-pointer inline-block px-4 py-2 rounded-lg shadow-sm bg-yellow-500 text-white hover:bg-yellow-600 transition"
+onclick="openChatbot()">
+    Konsultasi Chatbot
+</h5>
                 </div>
             </div>
             <div class="md:w-1/2 relative">
@@ -387,7 +394,7 @@ onclick="openProductModal(this)">
 <!-- Product 6 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Asyifa"
-     data-long-desc="Madu Lambung Asyifa adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu menjaga kesehatan lambung dan sistem pencernaan. Membantu meredakan rasa tidak nyaman di perut, menjaga asam lambung tetap stabil, serta mendukung kesehatan pencernaan secara alami serta cocok untuk segala umur.">
+     data-long-desc="Madu Lambung Asyifa adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu penyembuhan penyakit lambung dan pencernaan. Membantu meredakan rasa tidak nyaman di perut, menjaga asam lambung tetap stabil, serta mendukung kesehatan pencernaan secara alami serta cocok untuk segala umur.">
 
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
     class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
@@ -416,7 +423,7 @@ onclick="openProductModal(this)">
 <!-- Product 7 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Angkak Darusyifa"
-     data-long-desc="Madu Angkak Darusyifa adalah madu herbal alami isi 470 gram yang membantu mendukung kesehatan darah, membantu meningkatkan kadar trombosit, serta menjaga daya tahan tubuh agar tetap optimal. Cocok untuk penderita DBD, penderita tipes, gejala imun turun, membantu mempercepat pemulihan dan menjaga kondisi tubuh tetap fit.">
+     data-long-desc="Madu Angkak Darusyifa adalah madu herbal alami isi 470 gram yang membantu mendukung kesehatan darah, membantu meningkatkan kadar trombosit, serta menjaga daya tahan tubuh agar tetap optimal. Cocok untuk penderita DBD, penderita tipes / typus , gejala imun turun, membantu mempercepat pemulihan dan menjaga kondisi tubuh tetap fit.">
 
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
     class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
@@ -1103,6 +1110,107 @@ function closeInfo() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
 }
+function scrollToPilihProduk() {
+    const target = document.querySelector('.arrow-left')?.parentElement;
+
+    if (target) {
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+function scrollToPilihProduk() {
+    const target = document.querySelector('button[onclick="openCategoryModal()"]');
+
+    if (target) {
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+function openChatbot() {
+    document.getElementById('chatbot-modal').classList.remove('hidden');
+    document.getElementById('chatbot-modal').classList.add('flex');
+}
+
+function closeChatbot() {
+    document.getElementById('chatbot-modal').classList.add('hidden');
+    document.getElementById('chatbot-modal').classList.remove('flex');
+}
+
+function sendChat() {
+    const input = document.getElementById('chat-input');
+    const msg = input.value.trim();
+    if (!msg) return;
+
+    addMessage("user", msg);
+    input.value = "";
+
+    setTimeout(() => {
+        addMessage("bot", getBotReply(msg));
+    }, 600);
+}
+
+function addMessage(type, text) {
+    const box = document.getElementById('chat-box');
+
+    const div = document.createElement('div');
+    div.className = type === "user"
+        ? "bg-teal-600 text-white p-2 rounded-lg ml-auto w-fit"
+        : "bg-gray-200 p-2 rounded-lg w-fit";
+
+    div.innerText = text;
+    box.appendChild(div);
+
+    box.scrollTop = box.scrollHeight;
+}
+
+function getBotReply(msg) {
+    msg = msg.toLowerCase();
+
+    // ===== BATUK =====
+    if (msg.includes("batuk") || msg.includes("flu") || msg.includes("pilek")) {
+        return "Untuk batuk & flu, kami rekomendasikan:\n✔ Madu Batuk BATGUR\n\nMembantu melegakan tenggorokan & batuk.";
+    }
+
+    // ===== ASAM LAMBUNG / LAMBUNG =====
+    if (msg.includes("asam lambung") || msg.includes("maag") || msg.includes("lambung")) {
+        return "Untuk asam lambung & lambung sensitif:\n✔ Madu Lambung Asyifa\n\nMembantu menenangkan lambung & pencernaan.";
+    }
+
+    // ===== STAMINA PRIA =====
+    if (msg.includes("stamina") || msg.includes("lemas") || msg.includes("pria") || msg.includes("vitalitas")) {
+        return "Untuk stamina & energi pria:\n✔ Super Top Libido (STL)\n✔ Kopi JANTAN ORIGINAL\n\nMeningkatkan energi & daya tahan tubuh.";
+    }
+
+    // ===== MADU LAMBUNG (BIAR TIDAK KETUKER DENGAN MADU MURNI) =====
+    if (msg.includes("madu lambung")) {
+        return "Untuk kesehatan lambung:\n✔ Madu Lambung Asyifa\n\nMembantu menjaga asam lambung & pencernaan.";
+    }
+
+    // ===== MADU MURNI / MADU UMUM =====
+    if (
+        msg.includes("madu murni") ||
+        (msg.includes("madu") && !msg.includes("lambung") && !msg.includes("batuk"))
+    ) {
+        return "Pilihan madu murni terbaik kami:\n✔ Madu Gholiban 500g\n✔ Madu Gholiban 1kg\n✔ Madu Angkak Darusyifa\n\nSemua madu asli & tanpa campuran gula.";
+    }
+    if (
+    msg.includes("trombosit") ||
+    msg.includes("tipes") ||
+    msg.includes("dbd") ||
+    msg.includes("darah") ||
+    msg.includes("platelet") ||
+    msg.includes("angkak")
+) {
+    return "Untuk membantu meningkatkan trombosit & daya tahan tubuh:\n✔ Madu Angkak Darusyifa\n\nMembantu menjaga kesehatan darah dan pemulihan tubuh.";
+}
+
+    // ===== DEFAULT =====
+    return "Silakan jelaskan lebih spesifik 😊\nContoh: batuk, madu murni, madu lambung, atau stamina.";
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -1169,6 +1277,38 @@ class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-fu
             <p>✔ Disuplai dari distributor terpercaya</p>
             <p>✔ Dikemas secara higienis</p>
             <p>✔ Harga ekonomis</p>
+        </div>
+
+    </div>
+</div>
+<!-- CHATBOT MODAL -->
+<div id="chatbot-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-xl flex flex-col h-[500px] overflow-hidden">
+
+        <!-- HEADER -->
+        <div class="bg-teal-600 text-white p-4 flex justify-between items-center">
+            <h3 class="font-bold">Chatbot Herbal Tunas</h3>
+            <button onclick="closeChatbot()">✕</button>
+        </div>
+
+        <!-- CHAT AREA -->
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-2 text-sm bg-gray-50">
+            <div class="bg-gray-200 p-2 rounded-lg w-fit">
+                Halo 👋 Saya chatbot herbal. Silakan ceritakan keluhan Anda.
+            </div>
+        </div>
+
+        <!-- INPUT -->
+        <div class="p-3 border-t flex gap-2">
+            <input id="chat-input" type="text"
+                class="flex-1 border rounded-lg px-3 py-2 text-sm"
+                placeholder="Tulis keluhan Anda...">
+
+            <button onclick="sendChat()"
+                class="bg-teal-600 text-white px-4 rounded-lg">
+                Kirim
+            </button>
         </div>
 
     </div>

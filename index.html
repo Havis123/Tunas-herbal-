@@ -117,11 +117,50 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
     </section>
 
     <!-- PERBAIKAN BAGIAN PRODUCTS SECTION -->
+<div class="text-center py-10">
+    <button onclick="openCategoryModal()"
+        class="bg-teal-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-teal-700 transition">
+        Pilih Produk
+    </button>
+</div>
+
+<div id="category-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-sm p-6 shadow-xl">
+
+        <h3 class="text-xl font-bold mb-4 text-center">Pilih Kategori</h3>
+
+        <div class="space-y-3">
+
+            <button onclick="filterCategory('Produk Madu')" class="w-full bg-yellow-100 hover:bg-yellow-200 p-3 rounded-lg font-semibold">
+                🐝 Produk Madu
+            </button>
+
+            <button onclick="filterCategory('Produk Herbal')" class="w-full bg-green-100 hover:bg-green-200 p-3 rounded-lg font-semibold">
+                🌿 Produk Herbal
+            </button>
+
+            <button onclick="filterCategory('Produk Susu')" class="w-full bg-blue-100 hover:bg-blue-200 p-3 rounded-lg font-semibold">
+                🥛 Produk Susu
+            </button>
+
+            <button onclick="filterCategory('Produk Stamina')" class="w-full bg-red-100 hover:bg-red-200 p-3 rounded-lg font-semibold">
+                🔥 Produk Stamina
+            </button>
+
+            <button onclick="filterCategory('all')" class="w-full bg-gray-200 hover:bg-gray-300 p-3 rounded-lg font-semibold">
+                📦 Semua Produk
+            </button>
+
+        </div>
+
+    </div>
+</div>
 
 <section id="produk" class="py-16 container mx-auto px-4">
     <div class="flex justify-between items-end mb-10">
         <div>
-            <h3 class="text-3xl font-bold mb-2">Produk Terpopuler</h3>
+            <h3 class="text-3xl font-bold mb-2">Kualitas Produk Terjamin</h3>
             <p class="text-gray-600">Pilihan terbaik untuk kesehatan keluarga Anda</p>
         </div>
         <div class="hidden md:block">
@@ -856,6 +895,49 @@ function closeProductModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
 }
+function openCategoryModal() {
+    const modal = document.getElementById('category-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeCategoryModal() {
+    const modal = document.getElementById('category-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+function filterCategory(category) {
+    const products = document.querySelectorAll('.product-card');
+
+    products.forEach(product => {
+        const badge = product.querySelector('span')?.innerText || '';
+
+        if (category === 'all' || badge === category) {
+            product.style.display = 'flex';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+
+    closeCategoryModal();
+}
+document.addEventListener("DOMContentLoaded", function () {
+    resetHome();
+});
+function resetHome() {
+    const products = document.querySelectorAll('.product-card');
+
+    products.forEach(p => {
+        p.style.display = 'none';
+    });
+
+    // optional: tutup modal kategori jika masih terbuka
+    const modal = document.getElementById('category-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -880,5 +962,11 @@ function closeProductModal() {
     </div>
 
 </div>
+<!-- Tombol Kembali (Reset Tampilan Produk) -->
+<button onclick="resetHome()"
+class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-200 flex items-center justify-center">
+    <span class="font-semibold">KEMBALI</span>
+</button>
+
 </body>
 </html>

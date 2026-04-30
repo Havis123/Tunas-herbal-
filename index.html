@@ -477,21 +477,32 @@ onclick="openProductModal(this)">
                 <div class="bg-teal-600 p-4 rounded-full mb-4">
                     <i data-lucide="truck" class="w-8 h-8"></i>
                 </div>
-                <h5 class="text-xl font-bold mb-2">Pengiriman Cepat</h5>
-                <p class="text-teal-100">Layanan pengantaran 1 jam sampai untuk area dalam kota.</p>
+                <h5 class="text-xl font-bold mb-2 cursor-pointer hover:underline" onclick="openOngkirModal()">
+    Pengiriman Cepat
+</h5>
+
+<p onclick="openOngkirModal()" class="text-teal-100 cursor-pointer hover:underline">
+    Pesanan diproses dan dikirim secepatnya untuk area sekitar.
+</p>
             </div>
             <div class="flex flex-col items-center">
                 <div class="bg-teal-600 p-4 rounded-full mb-4">
                     <i data-lucide="shield-check" class="w-8 h-8"></i>
                 </div>
-                <h5 class="text-xl font-bold mb-2">Produk 100% Asli</h5>
+                <h5 onclick="openAsliModal()" class="text-xl font-bold mb-2 cursor-pointer hover:underline">
+    Produk 100% Asli
+</h5>
                 <p class="text-teal-100">Semua produk kami terjamin keasliannya dan terdaftar di BPOM.</p>
             </div>
             <div class="flex flex-col items-center">
                 <div class="bg-teal-600 p-4 rounded-full mb-4">
                     <i data-lucide="user-check" class="w-8 h-8"></i>
                 </div>
-                <h5 class="text-xl font-bold mb-2">Konsultasi Gratis</h5>
+                <h5 class="text-xl font-bold mb-2">
+    <a href="https://wa.me/6289637737721" target="_blank" class="hover:underline">
+        Konsultasi Gratis
+    </a>
+</h5>
                 <p class="text-teal-100">Tanyakan keluhan Anda kepada kami melalui WhatsApp.</p>
             </div>
         </div>
@@ -974,6 +985,28 @@ function resetHome() {
         modal.classList.remove('flex');
     }
 }
+function openOngkirModal() {
+    const modal = document.getElementById('ongkir-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeOngkirModal() {
+    const modal = document.getElementById('ongkir-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+function openAsliModal() {
+    const modal = document.getElementById('asli-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeAsliModal() {
+    const modal = document.getElementById('asli-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -1003,6 +1036,46 @@ function resetHome() {
 class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-200 flex items-center justify-center">
     <span class="font-semibold">KEMBALI</span>
 </button>
+<!-- Ongkir Modal -->
+<div id="ongkir-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+    
+    <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative">
 
+        <button onclick="closeOngkirModal()" 
+            class="absolute top-3 right-3 bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+            ✕
+        </button>
+
+        <h3 class="text-xl font-bold mb-4 text-teal-700">Informasi Ongkir</h3>
+
+        <p class="text-gray-700 leading-relaxed text-sm">
+            Nikmati gratis ongkir untuk area terdekat (≤5 km).  
+            Pengiriman lokal di atas 5 km dikenakan biaya ringan Rp5.000–Rp7.000 sesuai jarak.  
+            Untuk luar kota, biaya kirim mengikuti tarif J&T / JNE.
+        </p>
+
+    </div>
+</div>
+<!-- Modal Produk Asli -->
+<div id="asli-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative">
+
+        <button onclick="closeAsliModal()" 
+            class="absolute top-3 right-3 bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+            ✕
+        </button>
+
+        <h3 class="text-xl font-bold mb-4 text-teal-700">Produk 100% Asli</h3>
+
+        <div class="space-y-2 text-gray-700 text-sm">
+            <p>✔ Produk asli & terjamin kualitasnya</p>
+            <p>✔ Disuplai dari distributor terpercaya</p>
+            <p>✔ Dikemas secara higienis</p>
+            <p>✔ Harga ekonomis</p>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

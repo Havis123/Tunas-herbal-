@@ -11,6 +11,22 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
         .modal-active { display: flex !important; }
+        .promo-price {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-top: 2px;
+}
+
+.promo-badge {
+    display: inline-block;
+    background: #ef4444;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -115,7 +131,7 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 
     <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-       <!-- Product 1 -->
+      <!-- Product 1 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 500 gram madu kalimantan">
     
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-500g.png"
@@ -126,77 +142,70 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
         <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
         <h4 class="text-lg font-bold mt-2">Madu Gholiban 500 gram</h4>
         <p class="text-sm text-gray-500 mb-4">Madu Kalimantan murni untuk segala kebutuhan.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 35.000</p>
-    </div>
 
-    <!-- Quantity Control -->
-    <div class="mt-4">
-
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-
-            <button 
-                onclick="changeQtyDirect(this, -1, 'Madu Gholiban 500 gram', 35000)" 
-                class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">
-                -
-            </button>
-
-            <span class="font-bold text-lg qty">0</span>
-
-            <button 
-                onclick="changeQtyDirect(this, 1, 'Madu Gholiban 500 gram', 35000)" 
-                class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">
-                +
-            </button>
-
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 40.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 35.000</p>
         </div>
-
-        <p class="text-xs text-gray-500 mt-1 text-center">
-            Atur jumlah sebelum checkout
-        </p>
-
     </div>
 
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Madu Gholiban 500 gram', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Madu Gholiban 500 gram', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
 </div>
 
-        <!-- Product 2 -->
+<!-- Product 2 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 1 kg madu kalimantan">
+    
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
         <h4 class="text-lg font-bold mt-2">Madu Gholiban 1 kg</h4>
         <p class="text-sm text-gray-500 mb-4">Madu Kalimantan murni untuk segala kebutuhan.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 60.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
+        </div>
     </div>
 
     <div class="mt-4">
         <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Madu Gholiban 1 kg', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <button onclick="changeQtyDirect(this, -1, 'Madu Gholiban 1 kg', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
             <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Madu Gholiban 1 kg', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+            <button onclick="changeQtyDirect(this, 1, 'Madu Gholiban 1 kg', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
 <!-- Product 3 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Assamulin kapsul otot sendi">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Herbal</span>
         <h4 class="text-lg font-bold mt-2">Assamulin</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 30 kapsul. Menjaga kesehatan otot dan sendi.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 65.000</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 72.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 65.000</p>
+        </div>
     </div>
 
     <div class="mt-4">
         <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <button onclick="changeQtyDirect(this, -1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
             <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+            <button onclick="changeQtyDirect(this, 1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -204,20 +213,24 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
         <h4 class="text-lg font-bold mt-2">Super Top Libido (STL)</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 4 kapsul. Menambah stamina pria dan durasi.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 65.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
+        </div>
     </div>
 
     <div class="mt-4">
         <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Super Top Libido (STL)', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <button onclick="changeQtyDirect(this, -1, 'STL', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
             <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Super Top Libido (STL)', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+            <button onclick="changeQtyDirect(this, 1, 'STL', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -225,20 +238,24 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
         <h4 class="text-lg font-bold mt-2">Kopi JANTAN ORIGINAL</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 1 sachet. Menambah stamina dan durasi.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 15.000</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 20.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 15.000</p>
+        </div>
     </div>
 
     <div class="mt-4">
         <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <button onclick="changeQtyDirect(this, -1, 'Kopi Jantan', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
             <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+            <button onclick="changeQtyDirect(this, 1, 'Kopi Jantan', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -246,20 +263,16 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
         <h4 class="text-lg font-bold mt-2">Madu Lambung Asyifa</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 280 gram. Membantu lambung dan pencernaan.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 45.000</p>
-    </div>
 
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Madu Lambung Asyifa', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Madu Lambung Asyifa', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 55.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 45.000</p>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -267,20 +280,16 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
         <h4 class="text-lg font-bold mt-2">Madu Angkak Darusyifa</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 470 gram. Membantu menambah trombosit.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 50.000</p>
-    </div>
 
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Madu Angkak Darusyifa', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Madu Angkak Darusyifa', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 60.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -288,20 +297,16 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-batgur.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
         <h4 class="text-lg font-bold mt-2">Madu Batuk BATGUR</h4>
-        <p class="text-sm text-gray-500 mb-4">Isi 280 gram. Untuk batuk, pilek, demam dan stamina.</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 35.000</p>
-    </div>
+        <p class="text-sm text-gray-500 mb-4">Isi 280 gram. Untuk batuk, pilek, demam.</p>
 
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Madu Batuk BATGUR', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Madu Batuk BATGUR', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 40.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 35.000</p>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -309,20 +314,16 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
     class="w-full h-64 object-cover rounded-lg mb-4">
+
     <div class="flex-grow">
         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
         <h4 class="text-lg font-bold mt-2">Susu Skygoat 200 gram</h4>
         <p class="text-sm text-gray-500 mb-4">Isi 8 sachet (25 gram/sachet)</p>
-        <p class="text-teal-700 font-bold text-xl">Rp 30.000</p>
-    </div>
 
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Susu Skygoat 200 gram', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Susu Skygoat 200 gram', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 38.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 30.000</p>
         </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
 </div>
 
@@ -733,6 +734,43 @@ function toggleMenu() {
         }, 10);
     }
 }
+function formatRupiah(num) {
+    return "Rp " + num.toLocaleString("id-ID");
+}
+
+function applyPromo() {
+    document.querySelectorAll(".product-card").forEach(card => {
+        const priceEl = card.querySelector(".real-price");
+        if (!priceEl) return;
+
+        // ambil harga asli (yang dijual)
+        let original = priceEl.innerText.replace(/[^0-9]/g, "");
+        original = parseInt(original);
+
+        if (!original) return;
+
+        // 🔥 harga "coret" (pura-pura naik 10%)
+        const fakeBeforePrice = Math.floor(original * 1.1);
+
+        const container = card.querySelector(".price-box");
+
+        container.innerHTML = `
+            <span class="promo-badge">DISKON 10%</span>
+
+            <!-- harga palsu (dicoret) -->
+            <div class="promo-price">
+                ${formatRupiah(fakeBeforePrice)}
+            </div>
+
+            <!-- harga asli (yang dibayar) -->
+            <div class="real-price text-teal-700 font-bold text-xl">
+                ${formatRupiah(original)}
+            </div>
+        `;
+    });
+}
+
+applyPromo();
 </script>
 </body>
 </html>

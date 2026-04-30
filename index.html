@@ -147,7 +147,11 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             <button onclick="filterCategory('Produk Stamina')" class="w-full bg-red-100 hover:bg-red-200 p-3 rounded-lg font-semibold">
                 🔥 Produk Stamina
             </button>
-
+            
+            <button onclick="filterCategory('Produk Minyak')" class="w-full bg-yellow-100 hover:bg-yellow-200 p-3 rounded-lg font-semibold">
+        🛢️ Produk Minyak
+            </button>
+    
             <button onclick="filterCategory('all')" class="w-full bg-gray-200 hover:bg-gray-300 p-3 rounded-lg font-semibold">
                 📦 Semua Produk
             </button>
@@ -427,6 +431,35 @@ onclick="openProductModal(this)">
             <button onclick="changeQtyDirect(this, -1, 'Susu Skygoat 200 gram', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
             <span class="font-bold text-lg qty">0</span>
             <button onclick="changeQtyDirect(this, 1, 'Susu Skygoat 200 gram', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 10 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak Zaitun Le Rice 300 ml"
+     data-long-desc="Minyak Zaitun Le Rice 300 ml adalah minyak zaitun premium yang diekstrak dari buah zaitun pilihan berkualitas tinggi. Kaya akan antioksidan dan lemak sehat yang baik untuk tubuh. Membantu menjaga kesehatan jantung, merawat kulit dan rambut, serta dapat digunakan untuk konsumsi harian maupun perawatan luar tubuh secara alami.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak Zaitun Le Rice 300 ml</h4>
+        <p class="text-sm text-gray-500 mb-4">Minyak zaitun alami untuk kesehatan dan perawatan tubuh.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 50.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 45.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak Zaitun Le Rice 300 ml', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak Zaitun Le Rice 300 ml', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
         </div>
     </div>
 </div>

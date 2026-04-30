@@ -132,11 +132,14 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
     <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
       <!-- Product 1 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 500 gram madu kalimantan">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Gholiban 500 gram madu kalimantan"
+     data-long-desc="Madu Gholiban ini adalah madu murni dari Kalimantan yang dipanen secara alami tanpa campuran gula. Memiliki rasa khas, kaya antioksidan, membantu meningkatkan daya tahan tubuh, menjaga stamina, dan baik untuk konsumsi harian keluarga.">
     
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-500g.png"
     alt="Madu Gholiban 500 gram"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+     onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
@@ -159,10 +162,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 2 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full" data-name="Madu Gholiban 1 kg madu kalimantan">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Gholiban 1 kg madu kalimantan"
+     data-long-desc="Madu Gholiban 1 kg ini adalah madu murni asli dari Kalimantan yang dipanen secara alami tanpa campuran gula atau bahan kimia. Memiliki rasa manis alami yang khas, kaya antioksidan, serta baik untuk menjaga daya tahan tubuh, meningkatkan stamina, dan membantu kesehatan keluarga secara keseluruhan.">
     
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
@@ -184,10 +190,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
     </div>
 </div>
 
-<!-- Product 3 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Assamulin"
+     data-long-desc="Assamulin adalah suplemen herbal isi 30 kapsul yang membantu menjaga kesehatan otot dan sendi. Terbuat dari bahan herbal pilihan yang mendukung kelancaran aktivitas harian, mengurangi rasa pegal, rematik, asam urat, meriang, menurunkan kolesterol, menurunkan zat purin di dalam tubuh, serta menjaga fleksibilitas tubuh agar tetap sehat dan bugar.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Herbal</span>
@@ -210,9 +219,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 4 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Super Top Libido STL"
+     data-long-desc="Super Top Libido (STL) adalah suplemen herbal isi 4 kapsul yang membantu meningkatkan stamina pria, memperkuat energi, serta mendukung durasi dan performa. Diracik dari bahan herbal pilihan yang aman digunakan dan membantu meningkatkan vitalitas secara alami.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
@@ -235,9 +248,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 5 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Kopi Jantan Original"
+     data-long-desc="Kopi Jantan Original adalah minuman herbal berbentuk kopi sachet yang dirancang untuk membantu meningkatkan stamina, energi, daya tahan tubuh dan juga menambah durasi . Cocok untuk aktivitas harian agar tetap bertenaga lebih lama secara alami.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
@@ -260,9 +277,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 6 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Lambung Asyifa"
+     data-long-desc="Madu Lambung Asyifa adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu menjaga kesehatan lambung dan sistem pencernaan. Membantu meredakan rasa tidak nyaman di perut, menjaga asam lambung tetap stabil, serta mendukung kesehatan pencernaan secara alami serta cocok untuk segala umur.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
@@ -285,9 +306,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 7 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Angkak Darusyifa"
+     data-long-desc="Madu Angkak Darusyifa adalah madu herbal alami isi 470 gram yang membantu mendukung kesehatan darah, membantu meningkatkan kadar trombosit, serta menjaga daya tahan tubuh agar tetap optimal. Cocok untuk penderita DBD, penderita tipes, gejala imun turun, membantu mempercepat pemulihan dan menjaga kondisi tubuh tetap fit.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
@@ -310,9 +335,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 8 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Batuk BATGUR"
+     data-long-desc="Madu Batuk BATGUR adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu meredakan batuk kering, batuk berdahak, rasa menggatal di tenggorokan, radang tenggorokan, pilek, dan gejala flu ringan. Membantu melegakan tenggorokan, meningkatkan daya tahan tubuh, serta mendukung pemulihan secara alami.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-batgur.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
@@ -335,9 +364,13 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 </div>
 
 <!-- Product 9 -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full">
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu Skygoat 200 gram"
+     data-long-desc="Susu Skygoat 200 gram adalah susu kambing bubuk berkualitas yang terdiri dari 8 sachet (25 gram/sachet). Mengandung nutrisi yang baik untuk kesehatan tubuh, membantu menjaga daya tahan, membantu penyembuhan pernapasan, membantu menguat kekuatan tulang, membantu menjaga kesehatan pencernaan, serta mendukung kebutuhan gizi harian secara alami.">
+
     <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
-    class="w-full h-64 object-cover rounded-lg mb-4">
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
 
     <div class="flex-grow">
         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
@@ -803,6 +836,49 @@ function applyPromo() {
 }
 
 applyPromo();
+function openProductModal(imgEl) {
+    const card = imgEl.closest('.product-card');
+
+    const img = imgEl.src;
+    const title = card.querySelector('h4')?.innerText || '';
+    const desc = card.getAttribute('data-long-desc') || '';
+
+    document.getElementById('modal-img').src = img;
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-desc').innerText = desc;
+
+    const modal = document.getElementById('product-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+function closeProductModal() {
+    const modal = document.getElementById('product-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
 </script>
+<!-- Product Detail Modal -->
+<div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+    
+    <div class="bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl relative">
+
+        <!-- Tombol close -->
+        <button onclick="closeProductModal()" 
+            class="absolute top-3 right-3 bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded-full flex items-center justify-center">
+            ✕
+        </button>
+
+        <!-- Gambar -->
+        <img id="modal-img" src="" class="w-full h-72 object-cover">
+
+        <!-- Konten -->
+        <div class="p-5">
+            <h3 id="modal-title" class="text-xl font-bold mb-2"></h3>
+            <p id="modal-desc" class="text-gray-600 text-sm leading-relaxed"></p>
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>

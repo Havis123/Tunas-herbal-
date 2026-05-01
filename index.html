@@ -1794,21 +1794,33 @@ function getBotReply(msg) {
     }
 
     // ===== BATUK / FLU =====
-    if (
-        msg.includes("batuk") ||
-        msg.includes("flu") ||
-        msg.includes("pilek") ||
-        msg.includes("tenggorokan") ||
-        msg.includes("radang")
-    ) {
-        return "Kalau kamu sedang mengalami batuk, flu, atau tenggorokan tidak nyaman, biasanya memang cukup mengganggu ya 😷\n\n" +
+if (
+    msg.includes("batuk") ||
+    msg.includes("flu") ||
+    msg.includes("pilek") ||
+    msg.includes("tenggorokan") ||
+    msg.includes("radang")
+) {
+    return "Keluhan batuk, flu, atau tenggorokan memang cukup mengganggu aktivitas sehari-hari 😷\n\n" +
 
-        "Untuk membantu meredakan, kamu bisa mencoba:\n\n" +
+    "Agar rekomendasi lebih tepat, biasanya dibedakan berdasarkan jenis batuk yang dialami:\n\n" +
 
-        "✔ Madu Batuk BATGUR – membantu melegakan tenggorokan & meredakan batuk\n\n" +
+    "🔹 Batuk kering / tenggorokan gatal:\n" +
+    "• Madu Batuk Asyifa Gurah – membantu meredakan batuk kering & melegakan tenggorokan\n" +
+    "• Madu Batuk HLV – rasa lebih ringan, tidak pedas, cocok untuk anak & dewasa\n\n" +
 
-        "Kalau ada gejala lain, boleh ceritakan juga ya supaya saya bantu rekomendasikan lebih tepat 😊";
-    }
+    "🔹 Batuk berdahak / flu / pilek:\n" +
+    "• Madu Batuk BATGUR – membantu mengencerkan dahak & meredakan batuk\n" +
+    "• Madu Batuk Asyifa 9 in 1 – manfaat lengkap untuk batuk kering & berdahak (paling laris)\n\n" +
+
+    "🔹 Batuk berat / butuh hasil lebih maksimal:\n" +
+    "• Madu Batuk Gurah Fit – formulasi premium, sangat direkomendasikan untuk hasil maksimal\n\n" +
+
+    "🔹 Batuk berkaitan dengan paru-paru / flek:\n" +
+    "• Madu Batuk Parugo – difokuskan untuk membantu masalah paru-paru & flek\n\n" +
+
+    "Kalau boleh tahu, kamu lagi mengalami batuk yang seperti apa? Biar saya bantu pilihkan yang paling cocok 😊";
+}
 
     // ===== STAMINA =====
     if (

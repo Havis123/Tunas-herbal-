@@ -208,7 +208,9 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
 
 </div>
 
-<div id="category-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
+<div id="category-modal"
+     onclick="handleOutsideClick(event)"
+     class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
 
     <div class="bg-white rounded-2xl w-full max-w-sm p-6 shadow-xl">
 
@@ -1984,6 +1986,16 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+
+function handleOutsideClick(e) {
+    const modalContent = document.querySelector('#category-modal > div');
+
+    // kalau klik di luar box putih
+    if (!modalContent.contains(e.target)) {
+        closeCategoryModal();
+    }
+}
+
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">

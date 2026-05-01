@@ -183,7 +183,7 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
     <!-- Search Section -->
     <section class="bg-white py-8 border-b">
         <div class="container mx-auto px-4">
-            <div class="max-w-2xl mx-auto flex items-center bg-teal-100 rounded-xl p-2 px-4 border focus-within:border-teal-500 transition">
+            <div class="max-w-2xl mx-auto flex items-center bg-yellow-100 rounded-xl p-2 px-4 border focus-within:border-yellow-500 transition">
                 <i data-lucide="search" class="text-gray-800"></i>
                 <input type="text" id="productSearch" onkeyup="filterProducts()" placeholder="Cari produk herbal dan jenis madu..." class="bg-transparent border-none focus:ring-0 w-full px-4 py-2">
             </div>
@@ -254,7 +254,9 @@ onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             <p class="text-gray-600">Pilihan terbaik untuk kesehatan keluarga Anda</p>
         </div>
         <div class="hidden md:block">
-            <span class="text-teal-600 font-semibold cursor-pointer">Lihat Semua →</span>
+            <span onclick="showAllProducts()" class="text-teal-600 font-semibold cursor-pointer">
+    Lihat Semua →
+</span>
         </div>
     </div>
 
@@ -1136,6 +1138,271 @@ onclick="openProductModal(this)">
     </div>
 </div>
 
+<!-- Product  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak Zaitun Aroma Therapy"
+     data-long-desc="Minyak Zaitun Aroma Therapy adalah minyak zaitun aromaterapi isi 60 ml yang digunakan khusus untuk perawatan luar tubuh. Tidak untuk dikonsumsi. Mengandung aroma lembut yang membantu relaksasi tubuh, melembapkan kulit, membantu pijat tradisional, serta memberikan efek menenangkan setelah aktivitas padat. Cocok digunakan sebagai minyak pijat, perawatan kulit kering, dan aromaterapi harian.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunwangi.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak Zaitun Aroma Therapy</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 60 ml. Untuk pijat & aromaterapi (tidak untuk diminum).</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 25.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 20.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak Zaitun Aroma Therapy', 20000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak Zaitun Aroma Therapy', 20000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak Zaitun Ath-Thoyyibah"
+     data-long-desc="Minyak Zaitun Ath-Thoyyibah adalah minyak zaitun murni dalam kemasan ekonomis isi 60 ml. Mengandung minyak zaitun alami yang kaya manfaat untuk kesehatan dan perawatan tubuh. Dapat digunakan untuk membantu melembapkan kulit, perawatan rambut, pijat tradisional, serta mendukung kesehatan tubuh secara alami dari luar. Produk ini praktis digunakan sehari-hari dengan kualitas minyak zaitun murni.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunaththoyibah.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak Zaitun Ath-Thoyyibah</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 60 ml. Minyak zaitun murni kemasan ekonomis.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 25.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 20.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak Zaitun Ath-Thoyyibah', 20000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak Zaitun Ath-Thoyyibah', 20000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak Zaitun Al Arobi"
+     data-long-desc="Minyak Zaitun Al Arobi adalah minyak zaitun murni berkualitas tinggi isi 285 ml yang dapat dikonsumsi maupun digunakan untuk perawatan luar tubuh. Kaya akan antioksidan dan lemak sehat yang baik untuk membantu menjaga kesehatan jantung, mendukung sistem pencernaan, serta meningkatkan daya tahan tubuh. Selain untuk konsumsi, minyak ini juga bermanfaat untuk perawatan kulit dan rambut secara alami.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunAlArabibeling.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak Zaitun Al Arobi</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 285 ml. Bisa dikonsumsi & perawatan tubuh.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 80.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 70.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak Zaitun Al Arobi', 70000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak Zaitun Al Arobi', 70000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak Zaitun Zevo Zaituna"
+     data-long-desc="Minyak Zaitun Zevo Zaituna adalah minyak zaitun murni berkualitas dalam bentuk kapsul isi 100 kapsul. Mengandung minyak zaitun yang kaya antioksidan dan lemak sehat yang bermanfaat untuk membantu menjaga kesehatan jantung, meningkatkan daya tahan tubuh, serta mendukung kesehatan pencernaan dari dalam. Bentuk kapsul membuatnya lebih praktis dan mudah dikonsumsi tanpa rasa minyak, serta tetap menjaga kualitas dan kemurnian minyak zaitun di dalamnya.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zevo.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak Zaitun Zevo Zaituna</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 100 kapsul. Praktis & mudah dikonsumsi.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 45.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 40.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak Zaitun Zevo Zaituna', 40000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak Zaitun Zevo Zaituna', 40000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak VCO VICO OIL"
+     data-long-desc="Minyak VCO VICO OIL adalah Virgin Coconut Oil (VCO) murni isi 125 ml yang dapat dikonsumsi. Terbuat dari kelapa pilihan dengan proses alami tanpa bahan kimia, sehingga tetap menjaga kandungan nutrisi alaminya. VCO dikenal membantu mendukung kesehatan tubuh, membantu menjaga kadar kolesterol, meningkatkan daya tahan tubuh, serta mendukung kesehatan pencernaan. Selain dikonsumsi, VCO juga dapat digunakan untuk perawatan kulit dan rambut secara alami.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/VCOVico.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak VCO VICO OIL</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 125 ml. Virgin Coconut Oil murni.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 35.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 30.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak VCO VICO OIL', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak VCO VICO OIL', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak VCO Classic UMS"
+     data-long-desc="Minyak VCO Classic UMS adalah Virgin Coconut Oil (VCO) murni isi 500 ml yang dapat dikonsumsi. Diproses dari kelapa pilihan secara alami tanpa bahan kimia sehingga menjaga kualitas dan nutrisi alaminya. VCO ini dikenal membantu mendukung kesehatan tubuh, membantu menjaga kadar kolesterol, meningkatkan metabolisme, serta mendukung kesehatan jantung dan pencernaan. Selain untuk konsumsi, juga dapat digunakan untuk perawatan kulit dan rambut secara alami.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Vcojerigen.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak VCO Classic UMS</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 500 ml. Virgin Coconut Oil murni (jerigen).</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 70.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 60.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak VCO Classic UMS', 60000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak VCO Classic UMS', 60000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak But But Wahida"
+     data-long-desc="Minyak But But Wahida adalah minyak herbal tradisional untuk pemakaian luar tubuh isi 60 ml. Difungsikan untuk membantu relaksasi tubuh melalui pijat, mengurangi rasa pegal, serta memberikan sensasi hangat pada tubuh. Minyak ini biasanya digunakan untuk perawatan luar seperti pijat tradisional, membantu meredakan kelelahan otot setelah aktivitas padat, serta memberikan rasa nyaman dan rileks. Tidak untuk dikonsumsi.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/butbutWahida.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak But But Wahida</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 60 ml. Minyak pijat tradisional penghangat tubuh.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 35.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 30.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak But But Wahida', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak But But Wahida', 30000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak But But Herba Jawi 99"
+     data-long-desc="Minyak But But Herba Jawi 99 adalah minyak herbal tradisional untuk pemakaian luar tubuh isi 75 ml. Difungsikan untuk membantu relaksasi tubuh, mengurangi rasa pegal dan lelah, serta memberikan sensasi hangat saat dipijatkan ke tubuh. Minyak ini cocok digunakan setelah aktivitas berat, saat badan terasa kaku, atau untuk pijat tradisional agar tubuh lebih rileks dan nyaman. Tidak untuk dikonsumsi.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/herbaJawi.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak But But Herba Jawi 99</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 75 ml. Minyak pijat herbal penghangat tubuh.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 30.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 25.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak But But Herba Jawi 99', 25000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak But But Herba Jawi 99', 25000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Minyak But But HNI (Minyak Herba Sinergi)"
+     data-long-desc="Minyak But But HNI (Minyak Herba Sinergi) adalah minyak herbal tradisional premium isi 100 ml yang digunakan untuk pemakaian luar tubuh. Produk ini merupakan versi lebih lengkap dan lebih populer dibanding minyak but-but biasa, diformulasikan untuk membantu relaksasi tubuh, mengurangi pegal linu, serta memberikan sensasi hangat dan nyaman saat dipijat. Cocok digunakan setelah aktivitas berat, kelelahan, atau untuk terapi pijat tradisional. Minyak ini tidak untuk dikonsumsi dan digunakan khusus pemakaian luar.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+        <h4 class="text-lg font-bold mt-2">Minyak But But HNI (Minyak Herba Sinergi)</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 100 ml. Versi lengkap & paling laris untuk pijat herbal.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 50.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 45.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Minyak But But HNI (Minyak Herba Sinergi)', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Minyak But But HNI (Minyak Herba Sinergi)', 45000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 
     </div>
@@ -1914,20 +2181,33 @@ if (
     }
 
     // ===== MINYAK =====
-    if (
-        msg.includes("minyak") ||
-        msg.includes("kulit") ||
-        msg.includes("rambut") ||
-        msg.includes("jantung")
-    ) {
-        return "Kalau kamu mencari produk untuk kesehatan jantung, kulit, atau perawatan tubuh, minyak alami bisa jadi pilihan yang bagus 🌿\n\n" +
+if (
+    msg.includes("minyak") ||
+    msg.includes("kulit") ||
+    msg.includes("rambut") ||
+    msg.includes("jantung")
+) {
 
-        "Rekomendasi dari kami:\n\n" +
+    return "Untuk perawatan kesehatan, kulit, rambut, hingga jantung, kami memiliki beberapa jenis minyak herbal yang bisa disesuaikan dengan kebutuhan kamu 🌿\n\n" +
 
-        "✔ Minyak Zaitun Le Rice – baik untuk kesehatan & perawatan tubuh\n\n" +
+    "🔹 MINYAK ZAITUN (konsumsi & perawatan)\n" +
+    "✔ Le Rice – kesehatan & perawatan tubuh\n" +
+    "✔ Ath-Thoyyibah – zaitun murni kemasan ekonomis\n" +
+    "✔ Al Arobi – kualitas premium, bisa diminum & luar\n" +
+    "✔ Zevo Zaituna – kapsul praktis untuk konsumsi\n" +
+    "✔ Aroma Therapy – hanya untuk pijat (tidak diminum)\n\n" +
 
-        "Bisa digunakan untuk konsumsi maupun perawatan luar 👍";
-    }
+    "🔹 MINYAK VCO (Virgin Coconut Oil)\n" +
+    "✔ VICO Oil – bantu kolesterol & daya tahan tubuh\n" +
+    "✔ VCO Classic UMS – versi besar & lebih hemat\n\n" +
+
+    "🔹 MINYAK BUT-BUT (minyak pijat tradisional)\n" +
+    "✔ Wahida – relaksasi & penghangat tubuh\n" +
+    "✔ Herba Jawi 99 – pijat & pegal linu\n" +
+    "✔ HNI Sinergi – versi lengkap & paling laris\n\n" +
+
+    "👉 Semua produk bisa dipilih sesuai kebutuhan kamu (konsumsi atau pemakaian luar).";
+}
 
     // ===== MADU UMUM =====
     if (
@@ -1945,7 +2225,7 @@ if (
     }
 
     // ===== DEFAULT =====
-    return "Halo 😊 Silakan ceritakan keluhan atau kebutuhan kamu ya.\n\nContoh:\n- Batuk / flu\n- Maag / lambung\n- Stamina\n- Pegal / sendi\n\nSaya siap bantu rekomendasikan produk yang paling sesuai 👍";
+    return "Halo 😊 Silakan ceritakan keluhan atau kebutuhan kamu ya atau kamu bisa langsung mencari produk yang kamu mau di kolom pencarian produk.\n\nContoh:\n- Batuk / flu\n- Maag / lambung\n- Stamina\n- Pegal / sendi\n\nSaya siap bantu rekomendasikan produk yang paling sesuai 👍";
 }
 function scrollToBottom() {
     const footer = document.getElementById('kontak');
@@ -1995,7 +2275,14 @@ function handleOutsideClick(e) {
         closeCategoryModal();
     }
 }
+function showAllProducts() {
+    const products = document.querySelectorAll('.product-card');
 
+    products.forEach(product => {
+        product.style.display = 'flex'; // atau 'block' sesuai layout kamu
+        product.classList.add('fade-in', 'show'); // kalau kamu pakai animasi fade
+    });
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">

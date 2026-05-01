@@ -8,6 +8,38 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
+    	.logo-anim {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+}
+
+.logo-anim.active {
+    animation: logoMagic 0.8s ease;
+}
+
+@keyframes logoMagic {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1);
+    }
+    25% {
+        transform: scale(1.15) rotate(8deg);
+        filter: brightness(1.4);
+    }
+    50% {
+        transform: scale(0.95) rotate(-8deg);
+        filter: brightness(1.2);
+    }
+    75% {
+        transform: scale(1.08) rotate(4deg);
+        filter: brightness(1.3);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1);
+    }
+}
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .product-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
@@ -173,9 +205,10 @@ onclick="openChatbot()">
             <div class="md:w-1/2 relative">
                 <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
                 <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
-alt="TUNAS HERBAL"
-class="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-80 md:h-96"
-onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
+     class="logo-anim rounded-2xl shadow-2xl relative z-10 w-full object-cover h-80 md:h-96"
+     onclick="animateLogo()"
+     alt="TUNAS HERBAL"
+     onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             </div>
         </div>
     </section>
@@ -2282,6 +2315,18 @@ function showAllProducts() {
         product.style.display = 'flex'; // atau 'block' sesuai layout kamu
         product.classList.add('fade-in', 'show'); // kalau kamu pakai animasi fade
     });
+}
+function animateLogo() {
+    const logo = document.querySelector('.logo-anim');
+
+    if (!logo) return;
+
+    logo.classList.remove('active');
+
+    // reset animasi supaya bisa diklik berkali-kali
+    void logo.offsetWidth;
+
+    logo.classList.add('active');
 }
 </script>
 <!-- Product Detail Modal -->

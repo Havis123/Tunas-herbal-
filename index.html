@@ -1036,6 +1036,17 @@ function filterCategory(category) {
     });
 
     closeCategoryModal();
+
+    // 🔥 tambahan scroll ke produk
+    setTimeout(() => {
+        const section = document.getElementById('produk');
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, 200);
 }
 document.addEventListener("DOMContentLoaded", function () {
     resetHome();

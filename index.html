@@ -128,12 +128,27 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
 
         <h2 class="text-xl font-bold mb-6 text-teal-600">Menu</h2>
 
-        <a href="#" class="block py-2 hover:text-teal-600">Beranda</a>
-        <a href="javascript:void(0)" onclick="scrollToPilihProduk()" class="block py-2 hover:text-teal-600">
+        <a href="#" onclick="toggleMenu()" class="block py-2 hover:text-teal-600">
+    Beranda
+</a>
+
+<a href="javascript:void(0)" 
+   onclick="scrollToPilihProduk(); toggleMenu()" 
+   class="block py-2 hover:text-teal-600">
     Produk
 </a>
-        <a href="#layanan" class="block py-2 hover:text-teal-600">Layanan</a>
-        <a href="#kontak" class="block py-2 hover:text-teal-600">Kontak</a>
+
+<a href="javascript:void(0)" 
+   onclick="scrollToLayanan(); toggleMenu()" 
+   class="block py-2 hover:text-teal-600">
+    Layanan
+</a>
+
+<a href="javascript:void(0)" 
+   onclick="scrollToBottom(); toggleMenu()" 
+   class="block py-2 hover:text-teal-600">
+    Kontak
+</a>
 
     </div>
 </div>
@@ -535,6 +550,152 @@ onclick="openProductModal(this)">
         </div>
     </div>
 </div>
+
+<!-- Product 11 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu kambing Etawalin 200 gram"
+     data-long-desc="Susu kambing Etawalin adalah susu kambing bubuk berkualitas tinggi yang diformulasikan untuk membantu menjaga kesehatan tubuh secara menyeluruh. Mengandung nutrisi penting yang baik untuk tulang, sendi, dan stamina. Cocok untuk membantu meredakan pegal, nyeri sendi, serta menjaga daya tahan tubuh agar tetap optimal.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawalin.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+        <h4 class="text-lg font-bold mt-2">Susu Kambing Etawalin</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram. Baik untuk tulang, sendi, dan stamina tubuh.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 105.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 95.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Susu Kambing Etawalin', 95000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Susu Kambing Etawalin', 95000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 12  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu Kambing Etawaku 200 gram"
+     data-long-desc="Susu Kambing Etawaku adalah susu kambing bubuk berkualitas yang diformulasikan untuk membantu menjaga kesehatan tubuh, meningkatkan stamina, serta membantu meredakan pegal dan nyeri sendi. Mengandung nutrisi penting yang baik untuk tulang, pencernaan, dan daya tahan tubuh, sehingga cocok dikonsumsi setiap hari.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaku.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+        <h4 class="text-lg font-bold mt-2">Susu Kambing Etawaku</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram. Bantu stamina, tulang, dan pencernaan lebih sehat.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 95.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 85.000</p>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Susu Kambing Etawaku', 85000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Susu Kambing Etawaku', 85000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 13 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu Kambing HNI Etta Goatmilk 200 gram"
+     data-long-desc="Susu Kambing HNI Etta Goatmilk adalah susu kambing bubuk premium yang diformulasikan untuk membantu menjaga kesehatan tubuh secara alami. Mengandung nutrisi penting yang baik untuk daya tahan tubuh, membantu melancarkan pencernaan, serta mendukung kesehatan tulang dan stamina harian. Cocok dikonsumsi oleh semua usia sebagai suplemen kesehatan alami.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawahni.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+        <h4 class="text-lg font-bold mt-2">Susu Kambing HNI Etta Goatmilk</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram. Bantu daya tahan tubuh & pencernaan lebih sehat.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 85.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 75.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Susu Kambing HNI Etta Goatmilk', 75000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Susu Kambing HNI Etta Goatmilk', 75000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Baru 14 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu Kambing Fresh Etawa 200 gram"
+     data-long-desc="Susu Kambing Fresh Etawa adalah susu kambing bubuk praktis dengan isi total 200 gram (10 sachet @20 gram). Membantu menjaga daya tahan tubuh, meningkatkan energi, serta mendukung kesehatan tulang dan pencernaan. Cocok dikonsumsi setiap hari untuk semua usia.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawafreshetawa.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+        <h4 class="text-lg font-bold mt-2">Susu Kambing Fresh Etawa</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram (10 sachet @20 gram)</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 40.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 35.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Susu Kambing Fresh Etawa', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Susu Kambing Fresh Etawa', 35000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Baru 15  -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Susu Kambing Etawa AMH Original Jahe 200 gram"
+     data-long-desc="Susu Kambing Etawa AMH hadir dalam varian Original dan Jahe dengan isi total 200 gram (10 sachet @20 gram). Mengandung nutrisi alami dari susu kambing yang membantu menjaga daya tahan tubuh, menghangatkan badan (varian jahe), serta baik untuk stamina dan kesehatan pencernaan. Cocok dikonsumsi harian untuk menjaga kebugaran tubuh.">
+
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaamh.png"
+    class="w-full h-64 object-cover rounded-lg mb-4 cursor-pointer"
+    onclick="openProductModal(this)">
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+        <h4 class="text-lg font-bold mt-2">Susu Kambing Etawa AMH Original / Jahe</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram (10 sachet @20 gram)</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 30.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 25.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Susu Kambing Etawa AMH Original / Jahe', 25000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Susu Kambing Etawa AMH Original / Jahe', 25000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
 
     </div>
 </section>
@@ -1131,16 +1292,6 @@ function scrollToPilihProduk() {
         });
     }
 }
-function scrollToPilihProduk() {
-    const target = document.querySelector('button[onclick="openCategoryModal()"]');
-
-    if (target) {
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-        });
-    }
-}
 function openChatbot() {
     document.getElementById('chatbot-modal').classList.remove('hidden');
     document.getElementById('chatbot-modal').classList.add('flex');
@@ -1221,6 +1372,25 @@ function getBotReply(msg) {
 
     // ===== DEFAULT =====
     return "Silakan jelaskan lebih spesifik 😊\nContoh: batuk, madu murni, madu lambung, atau stamina.";
+}
+function scrollToBottom() {
+    const footer = document.getElementById('kontak');
+    if (footer) {
+        footer.scrollIntoView({
+            behavior: 'smooth',
+            block: 'end'
+        });
+    }
+}
+function scrollToLayanan() {
+    const target = document.getElementById('layanan');
+
+    if (target) {
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 }
 </script>
 <!-- Product Detail Modal -->

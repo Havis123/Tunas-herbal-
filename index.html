@@ -186,12 +186,12 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
 </div>
     <!-- Hero Section -->
     <section class="relative bg-teal-50 py-16 md:py-24 overflow-hidden">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 z-10">
-                <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-gray-900">
                     Kesehatan Anda, <br><span class="text-teal-600">Prioritas Utama Kami</span>
                 </h2>
-                <p class="text-lg text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
+                <p class="text-base text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
                 <div class="flex flex-wrap gap-4">
                     <button onclick="scrollToPilihProduk()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
     Belanja Sekarang
@@ -200,25 +200,29 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
 onclick="openChatbot()">
     Konsultasi Chatbot
 </h5>
-                </div>
+</div>
             </div>
             <div class="md:w-1/2 relative">
                 <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
                 <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
-     class="logo-anim rounded-2xl shadow-2xl relative z-10 w-full object-cover h-80 md:h-96"
+     class="logo-anim rounded-2xl shadow-2xl relative z-10 
+w-full object-cover h-48 md:h-96 -mt-4 md:mt-0"
      onclick="animateLogo()"
      alt="TUNAS HERBAL"
      onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             </div>
         </div>
     </section>
-
+    
     <!-- Search Section -->
     <section class="bg-white py-8 border-b">
         <div class="container mx-auto px-4">
             <div class="max-w-2xl mx-auto flex items-center bg-yellow-100 rounded-xl p-2 px-4 border focus-within:border-yellow-500 transition">
                 <i data-lucide="search" class="text-gray-800"></i>
-                <input type="text" id="productSearch" onkeyup="filterProducts()" placeholder="Cari produk herbal dan jenis madu..." class="bg-transparent border-none focus:ring-0 w-full px-4 py-2">
+                <input type="text" id="productSearch"
+    onkeydown="handleEnter(event)"
+    placeholder="Cari produk herbal dan jenis madu..."
+    class="bg-transparent border-none focus:ring-0 w-full px-4 py-2">
             </div>
         </div>
     </section>
@@ -2847,7 +2851,28 @@ function scrollToTop() {
         behavior: "smooth"
     });
 }
+window.addEventListener("scroll", () => {
+    const btn = document.getElementById("scrollTopBtn");
+    const homeBtn = document.getElementById("homeBtn");
 
+    if (window.scrollY > 300) {
+        // tombol panah atas
+        btn.classList.remove("opacity-0", "pointer-events-none");
+        btn.classList.add("opacity-100");
+
+        // tombol 🚶
+        homeBtn.classList.remove("opacity-0", "pointer-events-none");
+        homeBtn.classList.add("opacity-100");
+    } else {
+        // tombol panah atas
+        btn.classList.add("opacity-0", "pointer-events-none");
+        btn.classList.remove("opacity-100");
+
+        // tombol 🚶
+        homeBtn.classList.add("opacity-0", "pointer-events-none");
+        homeBtn.classList.remove("opacity-100");
+    }
+});
 function handleOutsideClick(e) {
     const modalContent = document.querySelector('#category-modal > div');
 
@@ -2876,6 +2901,25 @@ function animateLogo() {
 
     logo.classList.add('active');
 }
+function handleEnter(e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+
+        // jalankan filter dulu
+        filterProducts();
+
+        // delay biar hasil filter muncul dulu (biar smooth)
+        setTimeout(() => {
+            const section = document.getElementById('produk');
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 150);
+    }
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -2901,8 +2945,11 @@ function animateLogo() {
 
 </div>
 <!-- Tombol Kembali (Reset Tampilan Produk) -->
-<button onclick="resetHome()"
-class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-200 flex items-center justify-center">
+<button id="homeBtn"
+onclick="resetHome()"
+class="fixed bottom-6 left-6 z-[999] bg-teal-600 text-white px-2 py-2 rounded-full shadow-2xl 
+opacity-0 pointer-events-none transition-all duration-300 
+hover:scale-110 active:scale-95 flex items-center justify-center">
     <span class="font-semibold">🚪🚶</span>
 </button>
 <!-- Ongkir Modal -->

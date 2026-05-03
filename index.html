@@ -193,8 +193,8 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                 </h2>
                 <p class="text-base text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
                 <div class="flex flex-wrap gap-4">
-                    <button onclick="scrollToPilihProduk()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
-    Belanja Sekarang
+                    <button onclick="scrollToPilihProduk()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition text-lg">
+    Lihat Produk
 </button>
                    <h5 class="text-xl font-bold mb-2 cursor-pointer inline-block px-4 py-2 rounded-lg shadow-sm bg-yellow-500 text-white hover:bg-yellow-600 transition"
 onclick="openChatbot()">
@@ -2094,39 +2094,59 @@ Manfaat:
         </div>
     </footer>
 
-    <!-- Shopping Cart Modal -->
-    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden items-center justify-center p-4">
-        <div class="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
-           <div class="p-6 border-b flex justify-between items-center bg-teal-600 text-white">
-                <h3 class="text-xl font-bold flex items-center gap-2">
-                    <i data-lucide="shopping-bag"></i> Keranjang Belanja
-                </h3>
-                <button onclick="toggleCart()" class="text-white hover:text-gray-200">
-                    <i data-lucide="x"></i>
-                </button>
+   <!-- Shopping Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+
+        <!-- HEADER -->
+        <div class="p-6 border-b flex justify-between items-center bg-teal-600 text-white">
+            <h3 class="text-xl font-bold flex items-center gap-2">
+                <i data-lucide="shopping-bag"></i> Keranjang Belanja
+            </h3>
+            <button onclick="toggleCart()" class="text-white hover:text-gray-200">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <!-- CART ITEMS -->
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4">
+            <p id="empty-cart-msg" class="text-center text-gray-500 py-10">
+                Keranjang Anda masih kosong.
+            </p>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="cart-footer" class="p-6 border-t bg-gray-50 hidden relative shrink-0">
+
+            <!-- RESET BUTTON -->
+            <button 
+                onclick="resetCart()"
+                class="absolute top-1 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full active:scale-95 transition-transform duration-150">
+                Reset
+            </button>
+
+            <!-- TOTAL -->
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-600 font-medium">Total Estimasi</span>
+                <span id="cart-total" class="text-2xl font-bold text-teal-700">Rp 0</span>
             </div>
-            <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4">
-                <!-- Cart items dynamically added here -->
-                <p id="empty-cart-msg" class="text-center text-gray-500 py-10">Keranjang Anda masih kosong.</p>
-            </div>
-            <div id="cart-footer" class="p-6 border-t bg-gray-50 hidden relative">
-    
-    <!-- 🔥 Tombol Reset -->
-    <button 
-        onclick="resetCart()"
-        class="absolute top-1 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full active:scale-95 transition-transform duration-150">
-        Reset
-    </button>
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-gray-600 font-medium">Total Estimasi</span>
-                    <span id="cart-total" class="text-2xl font-bold text-teal-700">Rp 0</span>
-                </div>
-                <button onclick="checkoutWhatsApp()" class="w-full bg-green-600 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
-                    <i data-lucide="message-circle"></i> Pesan via WhatsApp
-                </button>
-            </div>
+
+            <!-- 🔥 BUTTON WHATSAPP (WAJIB ADA) -->
+            <button onclick="checkoutWhatsApp()" 
+                class="w-full bg-green-600 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition flex items-center justify-center gap-2">
+                <i data-lucide="message-circle"></i> Pesan via WhatsApp
+            </button>
+
+            <!-- 🔵 BUTTON ONGKIR -->
+            <button onclick="openOngkirInfo()" 
+                class="w-full mt-3 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                Informasi Ongkir
+            </button>
+
         </div>
     </div>
+</div>
 
     <!-- Notification Message Box -->
     <div id="notif-box" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[200] bg-teal-800 text-white px-6 py-3 rounded-full shadow-lg hidden">
@@ -3007,6 +3027,17 @@ function handleEnter(e) {
         }, 150);
     }
 }
+function openOngkirInfo() {
+    const modal = document.getElementById('ongkir-info-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+
+function closeOngkirInfo() {
+    const modal = document.getElementById('ongkir-info-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
@@ -3120,6 +3151,27 @@ class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[999] bg-teal-600 text-white p
 
 ↑
 </button>
+<!-- Ongkir Info Modal -->
+<div id="ongkir-info-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[1000] hidden items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative">
+
+        <!-- tombol close -->
+        <button onclick="closeOngkirInfo()" 
+            class="absolute top-3 right-3 bg-gray-200 w-8 h-8 rounded-full flex items-center justify-center">
+            ✕
+        </button>
+
+        <h3 class="text-xl font-bold mb-4 text-teal-700">Informasi Ongkir</h3>
+
+        <p class="text-gray-700 text-sm leading-relaxed">
+            Nikmati gratis ongkir untuk area terdekat (&lt;3 km).  
+            Pengiriman lokal di atas 3 km dikenakan biaya ringan Rp3.000 – Rp5.000 – Rp7.000 sesuai jarak.  
+            Untuk luar kota, biaya kirim mengikuti tarif J&T / JNE.
+        </p>
+
+    </div>
+</div>
 </body>
 <div id="info-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative animate-[pop_0.25s_ease]">

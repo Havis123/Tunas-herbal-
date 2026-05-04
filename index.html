@@ -185,184 +185,34 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
     <!-- Hero Section -->
-<section class="relative bg-teal-50 py-16 md:py-24 overflow-hidden">
-    <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
-
-        <div class="md:w-1/2 mb-10 md:mb-0 z-10">
-            <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-gray-900">
-                Kesehatan Anda, <br><span class="text-teal-600">Prioritas Utama Kami</span>
-            </h2>
-
-            <p class="text-base text-gray-600 mb-8">
-                Dapatkan produk herbal berkualitas, Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.
-            </p>
-
-            <div class="flex flex-wrap gap-4">
-                <button onclick="scrollToPilihProduk()"
-                    class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition text-lg">
-                    Lihat Produk
-                </button>
-
-                <h5 onclick="openChatbot()"
-                    class="text-xl font-bold cursor-pointer inline-block px-4 py-2 rounded-lg shadow-sm bg-yellow-500 text-white hover:bg-yellow-600 transition">
-                    Konsultasi Chatbot
-                </h5>
+    <section class="relative bg-teal-50 py-16 md:py-24 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+                <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-gray-900">
+                    Kesehatan Anda, <br><span class="text-teal-600">Prioritas Utama Kami</span>
+                </h2>
+                <p class="text-base text-gray-600 mb-8">Dapatkan produk herbal berkualitas,  Madu murni pilihan, dan Jaminan keaslian dari setiap produk kami dengan pengiriman cepat langsung ke rumah Anda.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="scrollToPilihProduk()" class="bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-700 transition text-lg">
+    Lihat Produk
+</button>
+                   <h5 class="text-xl font-bold mb-2 cursor-pointer inline-block px-4 py-2 rounded-lg shadow-sm bg-yellow-500 text-white hover:bg-yellow-600 transition"
+onclick="openChatbot()">
+    Konsultasi Chatbot
+</h5>
+</div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
+                <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
+     class="logo-anim rounded-2xl shadow-2xl relative z-10 
+w-full object-cover h-48 md:h-96 -mt-4 md:mt-0"
+     onclick="animateLogo()"
+     alt="TUNAS HERBAL"
+     onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
             </div>
         </div>
-
-        <div class="md:w-1/2 relative">
-            <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
-
-            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
-                class="logo-anim rounded-2xl shadow-2xl relative z-10 w-full object-cover h-48 md:h-96 -mt-4 md:mt-0"
-                onclick="animateLogo()"
-                alt="TUNAS HERBAL"
-                onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
-        </div>
-
-    </div>
-</section>
-<!-- Produk Terlaris -->
-<section class="px-4 pb-10 mt-10 md:mt-16">
-
-    <div class="container mx-auto">
-        <h3 class="text-xl font-bold mb-4 text-gray-800">
-            ✨Produk Terlaris✨
-        </h3>
-        <div class="grid grid-cols-2 gap-4 md:flex md:overflow-x-auto md:gap-6 md:pb-4 md:scroll-smooth">
-
-    <!-- Produk 1 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Gholiban 1 kg"
-         data-long-desc="Madu murni Kalimantan berkualitas tinggi.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">
-            Produk Madu
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Gholiban 1 kg
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
-    </div>
-
-
-    <!-- Produk 2 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Lambung Asyifa"
-         data-long-desc="Membantu menjaga kesehatan lambung.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">
-            Produk Herbal
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Lambung Asyifa
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 55.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-
-
-    <!-- Produk 3 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Angkak Darusyifa"
-         data-long-desc="Membantu meningkatkan trombosit.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">
-            Produk Herbal
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Angkak Darusyifa
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
-    </div>
-
-
-    <!-- Produk 4 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Minyak But But HNI"
-         data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">
-            Produk Minyak
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Minyak But But HNI
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-
-
-    <!-- Produk 5 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Susu Skygoat"
-         data-long-desc="Susu kambing bubuk berkualitas.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">
-            Produk Susu
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Susu Skygoat
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 38.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 30.000</p>
-    </div>
-
-
-    <!-- Produk 6 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Minyak Zaitun Le Rice"
-         data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">
-            Produk Minyak
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Minyak Zaitun Le Rice
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-</div>
-</section>
+    </section>
     
     <!-- Search Section -->
     <section class="bg-white py-8 border-b">
@@ -418,7 +268,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
             </button>
 
             <button onclick="filterCategory('Produk Stamina')" class="w-full bg-red-100 hover:bg-red-200 p-3 rounded-lg font-semibold">
-                💪 Produk Stamina
+                🔥 Produk Stamina
             </button>
             
             <button onclick="filterCategory('Produk Hiu Herbalindo')" class="w-full bg-amber-200 hover:bg-amber-100 p-3 rounded-lg font-semibold">
@@ -453,7 +303,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
 
     <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <!-- Product  -->
+      <!-- Product 1 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Gholiban 500 gram madu kalimantan"
      data-long-desc="Madu Gholiban ini adalah madu murni dari Kalimantan yang dipanen secara alami tanpa campuran gula. Memiliki rasa khas, kaya antioksidan, membantu meningkatkan daya tahan tubuh, menjaga stamina, dan baik untuk konsumsi harian keluarga.">
@@ -485,7 +335,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 2 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Gholiban 1 kg madu kalimantan"
      data-long-desc="Madu Gholiban 1 kg ini adalah madu murni asli dari Kalimantan yang dipanen secara alami tanpa campuran gula atau bahan kimia. Memiliki rasa manis alami yang khas, kaya antioksidan, serta baik untuk menjaga daya tahan tubuh, meningkatkan stamina, dan membantu kesehatan keluarga secara keseluruhan.">
@@ -516,7 +366,102 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 3 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Assamulin"
+     data-long-desc="Assamulin adalah suplemen herbal isi 30 kapsul yang membantu menjaga kesehatan otot dan sendi. Terbuat dari bahan herbal pilihan yang mendukung kelancaran aktivitas harian, mengurangi rasa pegal, rematik, asam urat, meriang, menurunkan kolesterol, menurunkan zat purin di dalam tubuh, serta menjaga fleksibilitas tubuh agar tetap sehat dan bugar.">
+
+    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
+    class="max-h-full max-w-full object-contain cursor-pointer"
+    onclick="openProductModal(this)">
+</div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+        <h4 class="text-lg font-bold mt-2">Assamulin</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 30 kapsul. Menjaga kesehatan otot dan sendi.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 72.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 65.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Assamulin', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Super Top Libido STL"
+     data-long-desc="Super Top Libido (STL) adalah suplemen herbal isi 4 kapsul yang membantu meningkatkan stamina pria, memperkuat energi, serta mendukung durasi dan performa. Diracik dari bahan herbal pilihan yang aman digunakan dan membantu meningkatkan vitalitas secara alami.">
+
+   <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
+    class="max-h-full max-w-full object-contain cursor-pointer"
+    onclick="openProductModal(this)">
+</div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
+        <h4 class="text-lg font-bold mt-2">Super Top Libido (STL)</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 4 kapsul. Menambah stamina pria dan durasi.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 65.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
+        </div>
+    </div>
+
+     <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Super Top Libido (STL)', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Super Top Libido (STL)', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        </div>
+        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
+    </div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Kopi Jantan Original"
+     data-long-desc="Kopi Jantan Original adalah minuman herbal berbentuk kopi sachet yang dirancang untuk membantu meningkatkan stamina, energi, daya tahan tubuh dan juga menambah durasi . Cocok untuk aktivitas harian agar tetap bertenaga lebih lama secara alami.">
+
+    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
+    class="max-h-full max-w-full object-contain cursor-pointer"
+    onclick="openProductModal(this)">
+</div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
+        <h4 class="text-lg font-bold mt-2">Kopi JANTAN ORIGINAL</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 1 sachet. Menambah stamina dan durasi.</p>
+
+        <div class="price-box">
+            <div class="promo-price text-gray-400 line-through text-sm">Rp 20.000</div>
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 15.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        </div>
+        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
+    </div>
+</div>
+
+<!-- Product 6 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Asyifa"
      data-long-desc="Madu Lambung Asyifa adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu penyembuhan penyakit lambung dan pencernaan. Membantu meredakan rasa tidak nyaman di perut, menjaga asam lambung tetap stabil, serta mendukung kesehatan pencernaan secara alami serta cocok untuk segala umur.">
@@ -547,7 +492,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 7 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Angkak Darusyifa"
      data-long-desc="Madu Angkak Darusyifa adalah madu herbal alami isi 470 gram yang membantu mendukung kesehatan darah, membantu meningkatkan kadar trombosit, serta menjaga daya tahan tubuh agar tetap optimal. Cocok untuk penderita DBD, penderita tipes / typus , gejala imun turun, membantu mempercepat pemulihan dan menjaga kondisi tubuh tetap fit.">
@@ -578,7 +523,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 8 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Batuk BATGUR"
      data-long-desc="Madu Batuk BATGUR adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu meredakan batuk kering, batuk berdahak, rasa menggatal di tenggorokan, radang tenggorokan, pilek, dan gejala flu ringan. Membantu melegakan tenggorokan, meningkatkan daya tahan tubuh, serta mendukung pemulihan secara alami.">
@@ -609,7 +554,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 9 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu Skygoat 200 gram"
      data-long-desc="Susu Skygoat 200 gram adalah susu kambing bubuk berkualitas yang terdiri dari 8 sachet (25 gram/sachet). Mengandung nutrisi yang baik untuk kesehatan tubuh, membantu menjaga daya tahan, membantu penyembuhan pernapasan, membantu menguat kekuatan tulang, membantu menjaga kesehatan pencernaan, serta mendukung kebutuhan gizi harian secara alami.">
@@ -640,7 +585,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 10 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Minyak Zaitun Le Rice 300 ml"
      data-long-desc="Minyak Zaitun Le Rice 300 ml adalah minyak zaitun premium yang diekstrak dari buah zaitun pilihan berkualitas tinggi. Kaya akan antioksidan dan lemak sehat yang baik untuk tubuh. Membantu menjaga kesehatan jantung, merawat kulit dan rambut, serta dapat digunakan untuk konsumsi harian maupun perawatan luar tubuh secara alami.">
@@ -671,7 +616,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 11 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu kambing Etawalin 200 gram"
      data-long-desc="Susu kambing Etawalin adalah susu kambing bubuk berkualitas tinggi yang diformulasikan untuk membantu menjaga kesehatan tubuh secara menyeluruh. Mengandung nutrisi penting yang baik untuk tulang, sendi, dan stamina. Cocok untuk membantu meredakan pegal, nyeri sendi, serta menjaga daya tahan tubuh agar tetap optimal.">
@@ -702,7 +647,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 12  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu Kambing Etawaku 200 gram"
      data-long-desc="Susu Kambing Etawaku adalah susu kambing bubuk berkualitas yang diformulasikan untuk membantu menjaga kesehatan tubuh, meningkatkan stamina, serta membantu meredakan pegal dan nyeri sendi. Mengandung nutrisi penting yang baik untuk tulang, pencernaan, dan daya tahan tubuh, sehingga cocok dikonsumsi setiap hari.">
@@ -733,7 +678,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 13 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu Kambing HNI Etta Goatmilk 200 gram"
      data-long-desc="Susu Kambing HNI Etta Goatmilk adalah susu kambing bubuk premium yang diformulasikan untuk membantu menjaga kesehatan tubuh secara alami. Mengandung nutrisi penting yang baik untuk daya tahan tubuh, membantu melancarkan pencernaan, serta mendukung kesehatan tulang dan stamina harian. Cocok dikonsumsi oleh semua usia sebagai suplemen kesehatan alami.">
@@ -764,7 +709,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product Baru  -->
+<!-- Product Baru 14 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu Kambing Fresh Etawa 200 gram"
      data-long-desc="Susu Kambing Fresh Etawa adalah susu kambing bubuk praktis dengan isi total 200 gram (10 sachet @20 gram). Membantu menjaga daya tahan tubuh, meningkatkan energi, serta mendukung kesehatan tulang dan pencernaan. Cocok dikonsumsi setiap hari untuk semua usia.">
@@ -795,7 +740,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product Baru 15  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Susu Kambing Etawa AMH Original Jahe 200 gram"
      data-long-desc="Susu Kambing Etawa AMH hadir dalam varian Original dan Jahe dengan isi total 200 gram (10 sachet @20 gram). Mengandung nutrisi alami dari susu kambing yang membantu menjaga daya tahan tubuh, menghangatkan badan (varian jahe), serta baik untuk stamina dan kesehatan pencernaan. Cocok dikonsumsi harian untuk menjaga kebugaran tubuh.">
@@ -826,7 +771,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 16  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Zestmag"
      data-long-desc="Madu Lambung Zestmag adalah madu herbal premium isi 280 gram yang diformulasikan khusus untuk membantu menjaga kesehatan lambung dan sistem pencernaan. Membantu meredakan gejala maag, asam lambung, perih di perut, serta menjaga keseimbangan asam lambung secara alami. Cocok untuk dikonsumsi rutin agar lambung tetap nyaman dan sehat.">
@@ -857,7 +802,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 17 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Vitagerd"
      data-long-desc="Madu Lambung Vitagerd adalah madu herbal premium isi 350 gram yang diformulasikan khusus untuk membantu mengatasi masalah lambung seperti maag, asam lambung naik, perih, dan kembung. Mengandung bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung secara menyeluruh. Cocok untuk penderita lambung kronis maupun pemeliharaan harian.">
@@ -888,7 +833,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 18 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Masambung"
      data-long-desc="Madu Lambung Masambung adalah madu herbal isi 350 gram yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, perih, kembung, dan asam lambung naik. Dibuat dari bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung secara alami untuk penggunaan harian.">
@@ -919,7 +864,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 19 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung HLV"
      data-long-desc="Madu Lambung HLV adalah madu herbal isi 170 gram yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, perih, kembung, dan asam lambung naik. Dengan kandungan bahan alami pilihan, produk ini membantu menenangkan lambung serta menjaga kesehatan pencernaan agar tetap nyaman untuk aktivitas sehari-hari.">
@@ -950,7 +895,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product   -->
+<!-- Product 20  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Freshmag"
      data-long-desc="Madu Lambung Freshmag adalah madu herbal isi 200 ml yang diformulasikan untuk membantu mengatasi gangguan lambung seperti maag, asam lambung naik, perih, dan kembung. Dengan bahan alami pilihan, produk ini membantu menenangkan lambung, menjaga keseimbangan asam lambung, serta mendukung kesehatan pencernaan secara menyeluruh. Cocok untuk penggunaan rutin bagi yang memiliki masalah lambung.">
@@ -981,7 +926,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product  -->
+<!-- Product 21 -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Kuning Sehat Lambung Attaubah"
      data-long-desc="Madu Kuning Sehat Lambung Attaubah adalah madu herbal isi 350 ml yang diformulasikan untuk membantu menjaga kesehatan lambung dan pencernaan. Membantu meredakan gejala maag, asam lambung naik, perih, dan kembung. Dengan kandungan alami berkualitas, produk ini membantu menenangkan lambung serta menjaga kenyamanan pencernaan untuk aktivitas sehari-hari.">
@@ -1012,7 +957,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
     </div>
 </div>
 
-<!-- Product -->
+<!-- Product 22  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Madu Lambung Aslamago"
      data-long-desc="Madu Lambung Aslamago adalah madu herbal isi 230 ml yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, asam lambung naik, perih, dan kembung. Dibuat dari bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung agar tetap stabil dan nyaman untuk aktivitas sehari-hari.">
@@ -2016,100 +1961,7 @@ Manfaat:
     </div>
 </div>
 
-<!-- Product Assamulin Original -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
-     data-name="Assamulin Original"
-     data-long-desc="Assamulin adalah suplemen herbal isi 30 kapsul yang membantu menjaga kesehatan otot dan sendi. Terbuat dari bahan herbal pilihan yang mendukung kelancaran aktivitas harian, mengurangi rasa pegal, rematik, asam urat, meriang, menurunkan kolesterol, menurunkan zat purin di dalam tubuh, serta menjaga fleksibilitas tubuh agar tetap sehat dan bugar.">
 
-    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
-    class="max-h-full max-w-full object-contain cursor-pointer"
-    onclick="openProductModal(this)">
-</div>
-
-    <div class="flex-grow">
-        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
-        <h4 class="text-lg font-bold mt-2">Assamulin Original</h4>
-        <p class="text-sm text-gray-500 mb-4">Isi 30 kapsul. Menjaga kesehatan otot dan sendi.</p>
-
-        <div class="price-box">
-            <div class="promo-price text-gray-400 line-through text-sm">Rp 72.000</div>
-            <p class="real-price text-teal-700 font-bold text-xl">Rp 65.000</p>
-        </div>
-    </div>
-
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Assamulin Original', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Assamulin Original', 65000)" class="bg-teal-500 text-white px-3 py-1 rounded">+</button>
-        </div>
-    </div>
-</div>
-
-<!-- Product Super Top Libido -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
-     data-name="Super Top Libido STL"
-     data-long-desc="Super Top Libido (STL) adalah suplemen herbal isi 4 kapsul yang membantu meningkatkan stamina pria, memperkuat energi, serta mendukung durasi dan performa. Diracik dari bahan herbal pilihan yang aman digunakan dan membantu meningkatkan vitalitas secara alami.">
-
-   <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
-    class="max-h-full max-w-full object-contain cursor-pointer"
-    onclick="openProductModal(this)">
-</div>
-
-    <div class="flex-grow">
-        <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
-        <h4 class="text-lg font-bold mt-2">Super Top Libido (STL)</h4>
-        <p class="text-sm text-gray-500 mb-4">Isi 4 kapsul. Menambah stamina pria dan durasi.</p>
-
-        <div class="price-box">
-            <div class="promo-price text-gray-400 line-through text-sm">Rp 65.000</div>
-            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
-        </div>
-    </div>
-
-     <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Super Top Libido (STL)', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Super Top Libido (STL)', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
-        </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
-    </div>
-</div>
-
-<!-- Product Kopi Jantan Original -->
-<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
-     data-name="Kopi Jantan Original"
-     data-long-desc="Kopi Jantan Original adalah minuman herbal berbentuk kopi sachet yang dirancang untuk membantu meningkatkan stamina, energi, daya tahan tubuh dan juga menambah durasi . Cocok untuk aktivitas harian agar tetap bertenaga lebih lama secara alami.">
-
-    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
-    class="max-h-full max-w-full object-contain cursor-pointer"
-    onclick="openProductModal(this)">
-</div>
-
-    <div class="flex-grow">
-        <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-1 rounded">Produk Stamina</span>
-        <h4 class="text-lg font-bold mt-2">Kopi JANTAN ORIGINAL</h4>
-        <p class="text-sm text-gray-500 mb-4">Isi 1 sachet. Menambah stamina dan durasi.</p>
-
-        <div class="price-box">
-            <div class="promo-price text-gray-400 line-through text-sm">Rp 20.000</div>
-            <p class="real-price text-teal-700 font-bold text-xl">Rp 15.000</p>
-        </div>
-    </div>
-
-    <div class="mt-4">
-        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
-            <button onclick="changeQtyDirect(this, -1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
-            <span class="font-bold text-lg qty">0</span>
-            <button onclick="changeQtyDirect(this, 1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
-        </div>
-        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
-    </div>
-</div>
 
 
 
@@ -2154,78 +2006,6 @@ Manfaat:
             </div>
         </div>
     </section>
-    
-    <!-- TESTIMONI -->
-<section class="bg-white py-16">
-    <div class="container mx-auto px-4">
-
-        <h3 class="text-3xl font-bold text-center mb-2">
-            ⭐ Testimoni Pelanggan
-        </h3>
-        <p class="text-center text-gray-500 mb-10">
-            Apa kata mereka tentang Tunas Herbal
-        </p>
-
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-            <!-- 1 -->
-            <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <h4 class="font-bold text-teal-600 mb-1">Rahmat Purwantono</h4>
-                <div class="text-yellow-400 mb-2">★★★★★</div>
-                <p class="text-gray-600">
-                    "Recomen untuk nyari madu murni dan madu herbal lainnya."
-                </p>
-            </div>
-
-            <!-- 2 -->
-            <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <h4 class="font-bold text-teal-600 mb-1">Chandra Sutrisno</h4>
-                <div class="text-yellow-400 mb-2">★★★★★</div>
-                <p class="text-gray-600">
-                    "Alhamdulillah sangat membantu buat yang mencari obat herbal murah."
-                </p>
-            </div>
-
-            <!-- 3 -->
-            <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <h4 class="font-bold text-teal-600 mb-1">Arie Susanto</h4>
-                <div class="text-yellow-400 mb-2">★★★★★</div>
-                <p class="text-gray-600">
-                    "Bagus, barang lumayan lengkap, pelayanan ramah."
-                </p>
-            </div>
-
-            <!-- 4 -->
-            <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <h4 class="font-bold text-teal-600 mb-1">Abu Ahnaf</h4>
-                <div class="text-yellow-400 mb-2">★★★★★</div>
-                <p class="text-gray-600">
-                    "Tempatnya strategis, pelayananya ramah, harganya pas."
-                </p>
-            </div>
-
-            <!-- 5 -->
-            <div class="bg-gray-50 p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                <h4 class="font-bold text-teal-600 mb-1">Norma Fawzia Rahmani</h4>
-                <div class="text-yellow-400 mb-2">★★★★★</div>
-                <p class="text-gray-600">
-                    "I like herbal ;)"
-                </p>
-            </div>
-
-        </div>
-
-        <!-- CTA -->
-        <div class="text-center mt-10">
-            <a href="https://maps.app.goo.gl/WAUTsVrXkPTXjUG37"
-               target="_blank"
-               class="inline-block bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition">
-               Lihat Review Lainnya di Google
-            </a>
-        </div>
-
-    </div>
-</section>
 
     <!-- Footer -->
     <footer id="kontak" class="bg-gray-900 text-gray-300 pt-16 pb-8">

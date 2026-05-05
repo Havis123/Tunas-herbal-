@@ -226,14 +226,22 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
         </div>
 
         <div class="md:w-1/2 relative">
-            <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
 
-            <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
-                class="logo-anim rounded-2xl shadow-2xl relative z-10 w-full object-cover h-48 md:h-96 -mt-4 md:mt-0"
-                onclick="animateLogo()"
-                alt="TUNAS HERBAL"
-                onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
-        </div>
+    <!-- Background biar transparansi terlihat -->
+    <div class="absolute inset-0 bg-gradient-to-br from-teal-50 to-white rounded-2xl"></div>
+
+    <!-- Efek blur dekorasi -->
+    <div class="w-full h-80 md:h-96 bg-teal-200 rounded-full absolute -top-10 -right-10 blur-3xl opacity-30"></div>
+
+    <!-- Logo -->
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.webp"
+        class="logo-anim relative z-10 w-full object-contain h-48 md:h-96 -mt-4 md:mt-0"
+        onclick="animateLogo()"
+        alt="TUNAS HERBAL"
+        loading="eager"
+        onerror="this.src='https://via.placeholder.com/800x600?text=Tunas+Herbal'">
+
+</div>
 
     </div>
 </section>
@@ -257,7 +265,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Madu Gholiban 1 kg"
                      data-long-desc="Madu murni Kalimantan berkualitas tinggi.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Gholiban 1 kg</h4>
@@ -270,7 +278,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Madu Lambung Asyifa"
                      data-long-desc="Membantu menjaga kesehatan lambung.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Lambung Asyifa</h4>
@@ -283,7 +291,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Madu Angkak Darusyifa"
                      data-long-desc="Membantu meningkatkan trombosit.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Angkak Darusyifa</h4>
@@ -296,7 +304,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Minyak But But HNI"
                      data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Minyak But But HNI</h4>
@@ -309,7 +317,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Susu Skygoat"
                      data-long-desc="Susu kambing bubuk berkualitas.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Susu Skygoat</h4>
@@ -322,7 +330,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Minyak Zaitun Le Rice"
                      data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Minyak Zaitun Le Rice</h4>
@@ -338,7 +346,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                 
                 <!-- Produk 1 -->
                 <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Gholiban 1 kg</h4>
@@ -351,7 +359,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Madu Lambung Asyifa"
                      data-long-desc="Membantu menjaga kesehatan lambung.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Lambung Asyifa</h4>
@@ -364,7 +372,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Madu Angkak Darusyifa"
                      data-long-desc="Membantu meningkatkan trombosit.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Madu Angkak Darusyifa</h4>
@@ -377,7 +385,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Minyak But But HNI"
                      data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Minyak But But HNI</h4>
@@ -390,7 +398,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Susu Skygoat"
                      data-long-desc="Susu kambing bubuk berkualitas.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Susu Skygoat</h4>
@@ -403,7 +411,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
                      onclick="openProductModal(this)"
                      data-name="Minyak Zaitun Le Rice"
                      data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
-                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.webp"
                          class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
                     <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
                     <h4 class="text-sm md:text-base font-semibold mt-2">Minyak Zaitun Le Rice</h4>
@@ -512,7 +520,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Gholiban ini adalah madu murni dari Kalimantan yang dipanen secara alami tanpa campuran gula. Memiliki rasa khas, kaya antioksidan, membantu meningkatkan daya tahan tubuh, menjaga stamina, dan baik untuk konsumsi harian keluarga.">
     
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-500g.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-500g.webp"
     alt="Madu Gholiban 500 gram"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
@@ -544,7 +552,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Gholiban 1 kg ini adalah madu murni asli dari Kalimantan yang dipanen secara alami tanpa campuran gula atau bahan kimia. Memiliki rasa manis alami yang khas, kaya antioksidan, serta baik untuk menjaga daya tahan tubuh, meningkatkan stamina, dan membantu kesehatan keluarga secara keseluruhan.">
     
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -575,7 +583,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Asyifa adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu penyembuhan penyakit lambung dan pencernaan. Membantu meredakan rasa tidak nyaman di perut, menjaga asam lambung tetap stabil, serta mendukung kesehatan pencernaan secara alami serta cocok untuk segala umur.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -606,7 +614,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Angkak Darusyifa adalah madu herbal alami isi 470 gram yang membantu mendukung kesehatan darah, membantu meningkatkan kadar trombosit, serta menjaga daya tahan tubuh agar tetap optimal. Cocok untuk penderita DBD, penderita tipes / typus , gejala imun turun, membantu mempercepat pemulihan dan menjaga kondisi tubuh tetap fit.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -637,7 +645,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk BATGUR adalah madu herbal alami isi 280 gram yang diformulasikan untuk membantu meredakan batuk kering, batuk berdahak, rasa menggatal di tenggorokan, radang tenggorokan, pilek, dan gejala flu ringan. Membantu melegakan tenggorokan, meningkatkan daya tahan tubuh, serta mendukung pemulihan secara alami.">
 
    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-batgur.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-batgur.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -668,7 +676,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu Skygoat 200 gram adalah susu kambing bubuk berkualitas yang terdiri dari 8 sachet (25 gram/sachet). Mengandung nutrisi yang baik untuk kesehatan tubuh, membantu menjaga daya tahan, membantu penyembuhan pernapasan, membantu menguat kekuatan tulang, membantu menjaga kesehatan pencernaan, serta mendukung kebutuhan gizi harian secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -699,7 +707,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak Zaitun Le Rice 300 ml adalah minyak zaitun premium yang diekstrak dari buah zaitun pilihan berkualitas tinggi. Kaya akan antioksidan dan lemak sehat yang baik untuk tubuh. Membantu menjaga kesehatan jantung, merawat kulit dan rambut, serta dapat digunakan untuk konsumsi harian maupun perawatan luar tubuh secara alami.">
 
    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -730,7 +738,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu kambing Etawalin adalah susu kambing bubuk berkualitas tinggi yang diformulasikan untuk membantu menjaga kesehatan tubuh secara menyeluruh. Mengandung nutrisi penting yang baik untuk tulang, sendi, dan stamina. Cocok untuk membantu meredakan pegal, nyeri sendi, serta menjaga daya tahan tubuh agar tetap optimal.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawalin.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawalin.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -761,7 +769,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu Kambing Etawaku adalah susu kambing bubuk berkualitas yang diformulasikan untuk membantu menjaga kesehatan tubuh, meningkatkan stamina, serta membantu meredakan pegal dan nyeri sendi. Mengandung nutrisi penting yang baik untuk tulang, pencernaan, dan daya tahan tubuh, sehingga cocok dikonsumsi setiap hari.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaku.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaku.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -792,7 +800,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu Kambing HNI Etta Goatmilk adalah susu kambing bubuk premium yang diformulasikan untuk membantu menjaga kesehatan tubuh secara alami. Mengandung nutrisi penting yang baik untuk daya tahan tubuh, membantu melancarkan pencernaan, serta mendukung kesehatan tulang dan stamina harian. Cocok dikonsumsi oleh semua usia sebagai suplemen kesehatan alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawahni.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawahni.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -823,7 +831,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu Kambing Fresh Etawa adalah susu kambing bubuk praktis dengan isi total 200 gram (10 sachet @20 gram). Membantu menjaga daya tahan tubuh, meningkatkan energi, serta mendukung kesehatan tulang dan pencernaan. Cocok dikonsumsi setiap hari untuk semua usia.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawafreshetawa.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawafreshetawa.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -854,7 +862,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Susu Kambing Etawa AMH hadir dalam varian Original dan Jahe dengan isi total 200 gram (10 sachet @20 gram). Mengandung nutrisi alami dari susu kambing yang membantu menjaga daya tahan tubuh, menghangatkan badan (varian jahe), serta baik untuk stamina dan kesehatan pencernaan. Cocok dikonsumsi harian untuk menjaga kebugaran tubuh.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaamh.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/susuetawaamh.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -885,7 +893,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Zestmag adalah madu herbal premium isi 280 gram yang diformulasikan khusus untuk membantu menjaga kesehatan lambung dan sistem pencernaan. Membantu meredakan gejala maag, asam lambung, perih di perut, serta menjaga keseimbangan asam lambung secara alami. Cocok untuk dikonsumsi rutin agar lambung tetap nyaman dan sehat.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zestmag.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zestmag.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -916,7 +924,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Vitagerd adalah madu herbal premium isi 350 gram yang diformulasikan khusus untuk membantu mengatasi masalah lambung seperti maag, asam lambung naik, perih, dan kembung. Mengandung bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung secara menyeluruh. Cocok untuk penderita lambung kronis maupun pemeliharaan harian.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/vitagerd.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/vitagerd.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -947,7 +955,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Masambung adalah madu herbal isi 350 gram yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, perih, kembung, dan asam lambung naik. Dibuat dari bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung secara alami untuk penggunaan harian.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/masambung.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/masambung.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -978,7 +986,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung HLV adalah madu herbal isi 170 gram yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, perih, kembung, dan asam lambung naik. Dengan kandungan bahan alami pilihan, produk ini membantu menenangkan lambung serta menjaga kesehatan pencernaan agar tetap nyaman untuk aktivitas sehari-hari.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambungHlv.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambungHlv.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1009,7 +1017,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Freshmag adalah madu herbal isi 200 ml yang diformulasikan untuk membantu mengatasi gangguan lambung seperti maag, asam lambung naik, perih, dan kembung. Dengan bahan alami pilihan, produk ini membantu menenangkan lambung, menjaga keseimbangan asam lambung, serta mendukung kesehatan pencernaan secara menyeluruh. Cocok untuk penggunaan rutin bagi yang memiliki masalah lambung.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/feshmag.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/feshmag.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
     </div>
@@ -1040,7 +1048,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Kuning Sehat Lambung Attaubah adalah madu herbal isi 350 ml yang diformulasikan untuk membantu menjaga kesehatan lambung dan pencernaan. Membantu meredakan gejala maag, asam lambung naik, perih, dan kembung. Dengan kandungan alami berkualitas, produk ini membantu menenangkan lambung serta menjaga kenyamanan pencernaan untuk aktivitas sehari-hari.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/attaubahmadukuning.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/attaubahmadukuning.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
     </div>
@@ -1071,7 +1079,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Lambung Aslamago adalah madu herbal isi 230 ml yang diformulasikan untuk membantu meredakan gangguan lambung seperti maag, asam lambung naik, perih, dan kembung. Dibuat dari bahan alami pilihan yang membantu menenangkan lambung, memperbaiki sistem pencernaan, serta menjaga kesehatan lambung agar tetap stabil dan nyaman untuk aktivitas sehari-hari.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/aslamago.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/aslamago.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
     </div>
@@ -1102,7 +1110,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Mecca Gurah adalah madu herbal isi 160 gram yang diformulasikan untuk membantu meredakan batuk kering maupun berdahak, tenggorokan gatal, pilek, dan flu ringan. Dengan bahan alami pilihan, produk ini membantu melegakan pernapasan, menghangatkan tubuh, serta mendukung daya tahan tubuh agar tetap fit. Cocok dikonsumsi saat cuaca tidak menentu atau kondisi tubuh menurun.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/meccamadugurah.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/meccamadugurah.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1133,7 +1141,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Herbatuk Sherin adalah madu herbal isi 160 gram yang diformulasikan untuk membantu meredakan batuk kering, batuk berdahak, tenggorokan gatal, dan gejala flu ringan. Dengan bahan alami pilihan, produk ini membantu melegakan tenggorokan, menghangatkan tubuh, serta mendukung daya tahan tubuh agar tetap fit. Cocok dikonsumsi saat kondisi tubuh kurang fit atau saat cuaca tidak menentu.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukmeccaherbatuk.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukmeccaherbatuk.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1164,7 +1172,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Jasmine F&B adalah madu herbal isi 150 gram yang diformulasikan untuk membantu meredakan batuk kering, batuk berdahak, tenggorokan gatal, serta gejala flu ringan. Dengan kandungan bahan alami, membantu melegakan tenggorokan, menjaga daya tahan tubuh, dan mempercepat pemulihan secara alami. Cocok dikonsumsi harian saat kondisi kurang fit.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/jasminef&b.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/jasminef&b.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1195,7 +1203,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Gurah Fit adalah madu herbal premium isi 280 gram yang diformulasikan khusus untuk membantu meredakan batuk kering, batuk berdahak, tenggorokan gatal, radang, serta gejala flu. Mengandung bahan herbal pilihan berkualitas tinggi yang bekerja lebih maksimal dalam melegakan pernapasan, membersihkan tenggorokan, serta mempercepat pemulihan. Cocok untuk kondisi batuk berat maupun ringan dan sangat direkomendasikan sebagai produk terbaik di kelasnya.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gurafitmadu.jpeg"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gurafitmadu.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1227,7 +1235,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Parugo adalah madu herbal isi 150 gram yang diformulasikan untuk membantu meredakan gangguan pernapasan, terutama yang berkaitan dengan paru-paru dan flek. Membantu mengencerkan dahak, melegakan saluran pernapasan, serta meredakan batuk berdahak dan sesak ringan. Cocok untuk yang mengalami batuk berkepanjangan atau masalah flek di paru-paru.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukparugo.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukparugo.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1259,7 +1267,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk HLV adalah madu herbal alami isi 165 gram yang diformulasikan untuk membantu meredakan batuk kering maupun berdahak, serta menjaga kesehatan tenggorokan dan pernapasan. Memiliki rasa yang lebih ringan dan tidak terlalu pedas, sehingga nyaman dikonsumsi oleh anak-anak maupun dewasa. Cocok untuk yang ingin manfaat madu batuk tanpa rasa menyengat, serta membantu meningkatkan daya tahan tubuh secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukhlv.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/batukhlv.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1291,7 +1299,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Asyifa Gurah adalah madu herbal alami isi 150 gram yang diformulasikan untuk membantu meredakan batuk berdahak kamu juga bisa untuk mengobati batuk kering juga, tenggorokan gatal, serta membantu melegakan pernapasan. Cocok untuk keluhan batuk dahak tapi bisa juga untuk batuk kering. Membantu menjaga daya tahan tubuh dan pemulihan secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifabatukgurah.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifabatukgurah.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1322,7 +1330,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Madu Batuk Asyifa 9 in 1 adalah madu herbal alami isi 175 gram yang diformulasikan dengan berbagai bahan pilihan untuk membantu meredakan batuk kering maupun berdahak, melegakan tenggorokan, serta membantu menjaga kesehatan pernapasan. Mengandung kombinasi herbal yang mendukung daya tahan tubuh dan mempercepat pemulihan secara alami. Produk ini merupakan salah satu yang paling laris karena manfaatnya yang lengkap dan cocok untuk berbagai keluhan batuk.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifa9in1.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifa9in1.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1353,7 +1361,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak Zaitun Aroma Therapy adalah minyak zaitun aromaterapi isi 60 ml yang digunakan khusus untuk perawatan luar tubuh. Tidak untuk dikonsumsi. Mengandung aroma lembut yang membantu relaksasi tubuh, melembapkan kulit, membantu pijat tradisional, serta memberikan efek menenangkan setelah aktivitas padat. Cocok digunakan sebagai minyak pijat, perawatan kulit kering, dan aromaterapi harian.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunwangi.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunwangi.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1384,7 +1392,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak Zaitun Ath-Thoyyibah adalah minyak zaitun murni dalam kemasan ekonomis isi 60 ml. Mengandung minyak zaitun alami yang kaya manfaat untuk kesehatan dan perawatan tubuh. Dapat digunakan untuk membantu melembapkan kulit, perawatan rambut, pijat tradisional, serta mendukung kesehatan tubuh secara alami dari luar. Produk ini praktis digunakan sehari-hari dengan kualitas minyak zaitun murni.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunaththoyibah.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunaththoyibah.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1415,7 +1423,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak Zaitun Al Arobi adalah minyak zaitun murni berkualitas tinggi isi 285 ml yang dapat dikonsumsi maupun digunakan untuk perawatan luar tubuh. Kaya akan antioksidan dan lemak sehat yang baik untuk membantu menjaga kesehatan jantung, mendukung sistem pencernaan, serta meningkatkan daya tahan tubuh. Selain untuk konsumsi, minyak ini juga bermanfaat untuk perawatan kulit dan rambut secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunAlArabibeling.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zaitunAlArabibeling.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1446,7 +1454,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak Zaitun Zevo Zaituna adalah minyak zaitun murni berkualitas dalam bentuk kapsul isi 100 kapsul. Mengandung minyak zaitun yang kaya antioksidan dan lemak sehat yang bermanfaat untuk membantu menjaga kesehatan jantung, meningkatkan daya tahan tubuh, serta mendukung kesehatan pencernaan dari dalam. Bentuk kapsul membuatnya lebih praktis dan mudah dikonsumsi tanpa rasa minyak, serta tetap menjaga kualitas dan kemurnian minyak zaitun di dalamnya.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zevo.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/zevo.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1477,7 +1485,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak VCO VICO OIL adalah Virgin Coconut Oil (VCO) murni isi 125 ml yang dapat dikonsumsi. Terbuat dari kelapa pilihan dengan proses alami tanpa bahan kimia, sehingga tetap menjaga kandungan nutrisi alaminya. VCO dikenal membantu mendukung kesehatan tubuh, membantu menjaga kadar kolesterol, meningkatkan daya tahan tubuh, serta mendukung kesehatan pencernaan. Selain dikonsumsi, VCO juga dapat digunakan untuk perawatan kulit dan rambut secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/VCOVico.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/VCOVico.webp"
         class="max-h-full max-w-full object-contain cursor-pointer"
         onclick="openProductModal(this)">
     </div>
@@ -1508,7 +1516,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak VCO Classic UMS adalah Virgin Coconut Oil (VCO) murni isi 500 ml yang dapat dikonsumsi. Diproses dari kelapa pilihan secara alami tanpa bahan kimia sehingga menjaga kualitas dan nutrisi alaminya. VCO ini dikenal membantu mendukung kesehatan tubuh, membantu menjaga kadar kolesterol, meningkatkan metabolisme, serta mendukung kesehatan jantung dan pencernaan. Selain untuk konsumsi, juga dapat digunakan untuk perawatan kulit dan rambut secara alami.">
 
     <<div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Vcojerigen.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Vcojerigen.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1539,7 +1547,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak But But Wahida adalah minyak herbal tradisional untuk pemakaian luar tubuh isi 60 ml. Difungsikan untuk membantu relaksasi tubuh melalui pijat, mengurangi rasa pegal, serta memberikan sensasi hangat pada tubuh. Minyak ini biasanya digunakan untuk perawatan luar seperti pijat tradisional, membantu meredakan kelelahan otot setelah aktivitas padat, serta memberikan rasa nyaman dan rileks. Tidak untuk dikonsumsi.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/butbutWahida.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/butbutWahida.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1570,7 +1578,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak But But Herba Jawi 99 adalah minyak herbal tradisional untuk pemakaian luar tubuh isi 75 ml. Difungsikan untuk membantu relaksasi tubuh, mengurangi rasa pegal dan lelah, serta memberikan sensasi hangat saat dipijatkan ke tubuh. Minyak ini cocok digunakan setelah aktivitas berat, saat badan terasa kaku, atau untuk pijat tradisional agar tubuh lebih rileks dan nyaman. Tidak untuk dikonsumsi.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/herbaJawi.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/herbaJawi.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1601,7 +1609,7 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
      data-long-desc="Minyak But But HNI (Minyak Herba Sinergi) adalah minyak herbal tradisional premium isi 100 ml yang digunakan untuk pemakaian luar tubuh. Produk ini merupakan versi lebih lengkap dan lebih populer dibanding minyak but-but biasa, diformulasikan untuk membantu relaksasi tubuh, mengurangi pegal linu, serta memberikan sensasi hangat dan nyaman saat dipijat. Cocok digunakan setelah aktivitas berat, kelelahan, atau untuk terapi pijat tradisional. Minyak ini tidak untuk dikonsumsi dan digunakan khusus pemakaian luar.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1638,7 +1646,7 @@ Manfaat:
 - Rematik, memar dan bisul">
 
     <div class="w-full h-64 flex items-center justify-center bg-white p-2 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/tempuyung.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/tempuyung.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1679,7 +1687,7 @@ Manfaat:
 - Sembab/bengkak karena timbunan cairan di jaringan">
 
    <div class="w-full h-64 flex items-center justify-center bg-white p-2 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kumiskucingherbalindo.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kumiskucingherbalindo.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1717,7 +1725,7 @@ Manfaat:
 - Mengobati radang dan nyeri">
 
     <div class="w-full h-64 flex items-center justify-center bg-white p-2 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/daunungu.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/daunungu.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1754,7 +1762,7 @@ Manfaat:
 - Membantu bangun lebih segar dan bugar">
 
     <div class="w-full h-64 flex items-center justify-center bg-white p-2 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/tdr.jpg"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/tdr.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1785,7 +1793,7 @@ Manfaat:
      data-long-desc="Neotensi Herbalindo adalah kapsul herbal isi 60 kapsul yang membantu mendukung kesehatan tekanan darah dan sistem kardiovaskular secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-white p-2 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/neotensi.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/neotensi.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1823,7 +1831,7 @@ Manfaat:
 - Memperbaiki gangguan menstruasi">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/mengkudu.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/mengkudu.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1860,7 +1868,7 @@ Manfaat:
 - Melancarkan peredaran darah">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/koleshiu.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/koleshiu.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -1897,7 +1905,7 @@ Manfaat:
 - Melancarkan peredaran darah  
 - Membantu meredakan peradangan">
 
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/karsifit.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/karsifit.webp"
     class="w-full h-64 object-contain bg-white rounded-lg mb-4 cursor-pointer p-2"
     onclick="openProductModal(this)">
 
@@ -1932,7 +1940,7 @@ Manfaat:
 - Mengatasi peradangan / pembengkakan  
 - Melancarkan air kencing">
 
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/hiupros.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/hiupros.webp"
     class="w-full h-64 object-contain bg-white rounded-lg mb-4 cursor-pointer p-2"
     onclick="openProductModal(this)">
 
@@ -1969,7 +1977,7 @@ Manfaat:
 - Tekanan pada area wajah dan hidung  
 - Pusing akibat gangguan pernapasan">
 
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gurahfluba.jpeg"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gurahfluba.webp"
     class="w-full h-64 object-contain bg-white rounded-lg mb-4 cursor-pointer p-2"
     onclick="openProductModal(this)">
 
@@ -2006,7 +2014,7 @@ Manfaat:
 - Membantu menjaga tekanan darah tetap stabil  
 - Mendukung fungsi kardiovaskular secara alami">
 
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/cardiocare.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/cardiocare.webp"
     class="w-full h-64 object-contain bg-white rounded-lg mb-4 cursor-pointer p-2"
     onclick="openProductModal(this)">
 
@@ -2045,7 +2053,7 @@ Manfaat:
 - Menghancurkan batu empedu  
 - Mencegah pembentukan endapan ginjal">
 
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/bantugin.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/bantugin.webp"
     class="w-full h-64 object-contain bg-white rounded-lg mb-4 cursor-pointer p-2"
     onclick="openProductModal(this)">
 
@@ -2069,13 +2077,13 @@ Manfaat:
     </div>
 </div>
 
-<!-- Product 3 -->
+<!-- Product  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Assamulin"
      data-long-desc="Assamulin adalah suplemen herbal isi 30 kapsul yang membantu menjaga kesehatan otot dan sendi. Terbuat dari bahan herbal pilihan yang mendukung kelancaran aktivitas harian, mengurangi rasa pegal, rematik, asam urat, meriang, menurunkan kolesterol, menurunkan zat purin di dalam tubuh, serta menjaga fleksibilitas tubuh agar tetap sehat dan bugar.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/assamulin.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -2100,13 +2108,13 @@ Manfaat:
     </div>
 </div>
 
-<!-- Product 4 -->
+<!-- Product -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Super Top Libido STL"
      data-long-desc="Super Top Libido (STL) adalah suplemen herbal isi 4 kapsul yang membantu meningkatkan stamina pria, memperkuat energi, serta mendukung durasi dan performa. Diracik dari bahan herbal pilihan yang aman digunakan dan membantu meningkatkan vitalitas secara alami.">
 
    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/STL.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -2132,13 +2140,13 @@ Manfaat:
     </div>
 </div>
 
-<!-- Product 5 -->
+<!-- Product  -->
 <div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
      data-name="Kopi Jantan Original"
      data-long-desc="Kopi Jantan Original adalah minuman herbal berbentuk kopi sachet yang dirancang untuk membantu meningkatkan stamina, energi, daya tahan tubuh dan juga menambah durasi . Cocok untuk aktivitas harian agar tetap bertenaga lebih lama secara alami.">
 
     <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
-    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.png"
+    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/kopi-jantan.webp"
     class="max-h-full max-w-full object-contain cursor-pointer"
     onclick="openProductModal(this)">
 </div>
@@ -2159,6 +2167,99 @@ Manfaat:
             <button onclick="changeQtyDirect(this, -1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
             <span class="font-bold text-lg qty">0</span>
             <button onclick="changeQtyDirect(this, 1, 'Kopi JANTAN ORIGINAL', 15000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        </div>
+        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Pahit Asyifa Gamat Emas"
+     data-long-desc="Madu Pahit Asyifa Gamat Emas adalah nutrisi herbal alami yang diformulasikan untuk membantu menjaga kesehatan tubuh secara menyeluruh. Cocok untuk membantu mengatasi berbagai keluhan seperti diabetes, kolesterol, hipertensi, asam urat, maag, serta membantu pemulihan pasca operasi. Juga bermanfaat untuk menjaga kesehatan jantung, liver, paru-paru, ginjal, dan meningkatkan daya tahan tubuh. Dapat membantu mengurangi gejala stroke, rematik, TBC, alergi, asma, osteoporosis, kesemutan, vertigo, serta membantu meningkatkan stamina dan vitalitas.">
+
+    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifasalimpahit.webp"
+             class="max-h-full max-w-full object-contain cursor-pointer"
+             onclick="openProductModal(this)">
+    </div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+        <h4 class="text-lg font-bold mt-2">Madu Pahit Asyifa Gamat Emas</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 470 gram. Produk madu pahit terlaris dan paling rekomen</p>
+
+        <div class="price-box">
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 55.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Madu Pahit Asyifa Gamat Emas', 55000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Madu Pahit Asyifa Gamat Emas', 55000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        </div>
+        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Pahit Asyifa 6 in 1"
+     data-long-desc="Madu Pahit Asyifa 6 in 1 merupakan nutrisi herbal alami yang diformulasikan untuk membantu menjaga kesehatan tubuh secara menyeluruh. Cocok untuk membantu mengatasi keluhan seperti diabetes, kolesterol, hipertensi, asam urat, dan maag. Juga membantu menjaga kesehatan jantung, liver, paru-paru, serta meningkatkan daya tahan tubuh. Dapat dikonsumsi untuk membantu menjaga stamina, mempercepat pemulihan tubuh, serta menunjang kesehatan harian secara alami.">
+
+    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/asyifapahit6in1.webp"
+             class="max-h-full max-w-full object-contain cursor-pointer"
+             onclick="openProductModal(this)">
+    </div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+        <h4 class="text-lg font-bold mt-2">Madu Pahit Asyifa 6 in 1</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 500 gram. Madu pahit untuk menjaga kesehatan & stamina harian.</p>
+
+        <div class="price-box">
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 50.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Madu Pahit Asyifa 6 in 1', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Madu Pahit Asyifa 6 in 1', 50000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
+        </div>
+        <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
+    </div>
+</div>
+
+<!-- Product -->
+<div class="product-card bg-white rounded-xl shadow-sm border overflow-hidden p-4 flex flex-col h-full"
+     data-name="Madu Pahit Prima Raja"
+     data-long-desc="Madu Pahit Prima Raja merupakan madu pahit versi ekonomis yang cocok untuk menjaga kesehatan tubuh sehari-hari. Dapat membantu menjaga stamina, daya tahan tubuh, serta mendukung kesehatan seperti kolesterol, asam urat, maag, dan tekanan darah. Cocok dikonsumsi secara rutin untuk membantu menjaga kebugaran dan keseimbangan tubuh secara alami dengan harga yang lebih terjangkau.">
+
+    <div class="w-full h-64 flex items-center justify-center bg-gray-50 rounded-lg mb-4 overflow-hidden">
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/rajapahit200.webp"
+             class="max-h-full max-w-full object-contain cursor-pointer"
+             onclick="openProductModal(this)">
+    </div>
+
+    <div class="flex-grow">
+        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+        <h4 class="text-lg font-bold mt-2">Madu Pahit Prima Raja</h4>
+        <p class="text-sm text-gray-500 mb-4">Isi 200 gram. Madu pahit versi ekonomis untuk kesehatan & stamina harian.</p>
+
+        <div class="price-box">
+            <p class="real-price text-teal-700 font-bold text-xl">Rp 37.000</p>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="flex items-center justify-between bg-gray-100 rounded-lg p-2">
+            <button onclick="changeQtyDirect(this, -1, 'Madu Pahit Prima Raja', 37000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">-</button>
+            <span class="font-bold text-lg qty">0</span>
+            <button onclick="changeQtyDirect(this, 1, 'Madu Pahit Prima Raja', 37000)" class="bg-teal-500 text-white px-3 py-1 rounded active:scale-90 transition">+</button>
         </div>
         <p class="text-xs text-gray-500 mt-1 text-center">Atur jumlah sebelum checkout</p>
     </div>
@@ -3456,7 +3557,7 @@ class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[999] bg-teal-600 text-white p
     <div class="relative w-[75%] md:w-[70%] lg:w-[60%] xl:w-[50%]
                 shadow-2xl animate-[pop_0.3s_ease]">
 
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.png"
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.webp"
              class="w-full h-auto rounded-xl">
 
         <p class="text-center mt-4 text-white font-semibold text-sm md:text-lg lg:text-xl">

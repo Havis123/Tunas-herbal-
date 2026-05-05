@@ -3801,21 +3801,29 @@ class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[999] bg-teal-600 text-white p
 </div>
 <div id="popup-awal"
      onclick="klikLuar(event)"
-     class="fixed inset-0 flex items-center justify-center z-[9999]"
-     style="background: rgba(0,0,0,0.6);">
+     class="fixed inset-0 flex items-center justify-center z-[9999] bg-black bg-opacity-75 p-4">
 
-    <div class="relative w-[75%] md:w-[70%] lg:w-[60%] xl:w-[50%]
-                shadow-2xl animate-[pop_0.3s_ease]">
+    <div class="relative w-[95%] sm:w-[85%] md:w-[70%] lg:w-[60%] xl:w-[50%] max-w-2xl shadow-2xl animate-[pop_0.3s_ease] flex flex-col items-center">
+        
+        <button onclick="tutupPopup()" 
+            class="absolute top-3 right-3 bg-black bg-opacity-50 hover:bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all z-10 shadow-md text-lg">
+            ✕
+        </button>
 
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/logo.webp"
-             class="w-full h-auto rounded-xl">
+        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Do.webp"
+             class="w-full h-auto rounded-2xl block object-contain shadow-lg"
+             alt="Gratis Ongkir Tunas Herbal">
 
-        <p class="text-center mt-4 text-white font-semibold text-sm md:text-lg lg:text-xl">
-            Selamat Datang di Tunas Herbal 🌿
-        </p>
+        <div class="text-center mt-5 px-2">
+            <p class="text-white font-bold text-xl md:text-2xl lg:text-3xl drop-shadow-md">
+                Selamat Datang di Tunas Herbal 🌿
+            </p>
+            <p class="text-teal-300 font-semibold text-base md:text-lg lg:text-xl mt-2 drop-shadow-sm">
+                🚚 Gratis Ongkir untuk Area Sekitar!
+            </p>
+        </div>
 
     </div>
-
 </div>
 
 <script>
@@ -3824,11 +3832,13 @@ function tutupPopup() {
 }
 
 function klikLuar(event) {
+    // Menutup pop-up saat area hitam di luar gambar diklik
     if (event.target.id === "popup-awal") {
         tutupPopup();
     }
 }
 </script>
+
 </body>
 <div id="info-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">
     <div class="bg-white rounded-2xl w-full max-w-md p-6 shadow-xl relative animate-[pop_0.25s_ease]">

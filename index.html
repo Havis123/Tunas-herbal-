@@ -111,6 +111,21 @@
     50% { opacity: 1; }
     100% { transform: translate(8px, -50%); opacity: 0; }
 }
+@keyframes scrollX {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scrollX 30s linear infinite;
+    will-change: transform;
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -229,139 +244,177 @@ class="fixed bottom-6 right-6 z-[999] p-4 bg-teal-600 text-white rounded-full sh
         <h3 class="text-xl font-bold mb-4 text-gray-800">
             ✨Produk Terlaris✨
         </h3>
-        <div class="grid grid-cols-2 gap-4 md:flex md:overflow-x-auto md:gap-6 md:pb-4 md:scroll-smooth">
 
-    <!-- Produk 1 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Gholiban 1 kg"
-         data-long-desc="Madu murni Kalimantan berkualitas tinggi.">
+        <div class="overflow-hidden">
+            <div class="flex gap-4 animate-scroll">
 
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                <!-- ================= -->
+                <!-- PRODUK ASLI -->
+                <!-- ================= -->
 
-        <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">
-            Produk Madu
-        </span>
+                <!-- Produk 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Madu Gholiban 1 kg"
+                     data-long-desc="Madu murni Kalimantan berkualitas tinggi.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Gholiban 1 kg</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
+                </div>
 
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Gholiban 1 kg
-        </h4>
+                <!-- Produk 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Madu Lambung Asyifa"
+                     data-long-desc="Membantu menjaga kesehatan lambung.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Lambung Asyifa</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 55.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
 
-        <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
+                <!-- Produk 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Madu Angkak Darusyifa"
+                     data-long-desc="Membantu meningkatkan trombosit.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Angkak Darusyifa</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Minyak But But HNI"
+                     data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Minyak But But HNI</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Susu Skygoat"
+                     data-long-desc="Susu kambing bubuk berkualitas.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Susu Skygoat</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 38.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 30.000</p>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Minyak Zaitun Le Rice"
+                     data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Minyak Zaitun Le Rice</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
+
+                <!-- ================= -->
+                <!-- DUPLIKAT (WAJIB) -->
+                <!-- ================= -->
+
+                <!-- Copy ulang semua produk di atas (1–6) persis sama -->
+                
+                <!-- Produk 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/gholiban-1kg.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-1 rounded">Produk Madu</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Gholiban 1 kg</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Madu Lambung Asyifa"
+                     data-long-desc="Membantu menjaga kesehatan lambung.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Lambung Asyifa</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 55.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Madu Angkak Darusyifa"
+                     data-long-desc="Membantu meningkatkan trombosit.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">Produk Herbal</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Madu Angkak Darusyifa</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
+                </div>
+
+                <!-- Produk 4 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Minyak But But HNI"
+                     data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Minyak But But HNI</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
+
+                <!-- Produk 5 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Susu Skygoat"
+                     data-long-desc="Susu kambing bubuk berkualitas.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Produk Susu</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Susu Skygoat</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 38.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 30.000</p>
+                </div>
+
+                <!-- Produk 6 -->
+                <div class="bg-white rounded-xl shadow-sm p-3 min-w-[160px] md:min-w-[220px] flex-shrink-0 cursor-pointer"
+                     onclick="openProductModal(this)"
+                     data-name="Minyak Zaitun Le Rice"
+                     data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
+                    <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
+                         class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
+                    <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">Produk Minyak</span>
+                    <h4 class="text-sm md:text-base font-semibold mt-2">Minyak Zaitun Le Rice</h4>
+                    <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
+                    <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-
-
-    <!-- Produk 2 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Lambung Asyifa"
-         data-long-desc="Membantu menjaga kesehatan lambung.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/lambung-asyifa.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">
-            Produk Herbal
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Lambung Asyifa
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 55.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-
-
-    <!-- Produk 3 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Madu Angkak Darusyifa"
-         data-long-desc="Membantu meningkatkan trombosit.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/madu-angkak-darusyifa.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">
-            Produk Herbal
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Madu Angkak Darusyifa
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 60.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 50.000</p>
-    </div>
-
-
-    <!-- Produk 4 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Minyak But But HNI"
-         data-long-desc="Minyak herbal untuk pijat dan relaksasi.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/minyaksinergi.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">
-            Produk Minyak
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Minyak But But HNI
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-
-
-    <!-- Produk 5 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Susu Skygoat"
-         data-long-desc="Susu kambing bubuk berkualitas.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/skygoat.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">
-            Produk Susu
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Susu Skygoat
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 38.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 30.000</p>
-    </div>
-
-
-    <!-- Produk 6 -->
-    <div class="bg-white rounded-xl shadow-sm p-3 min-w-[150px] md:min-w-[220px] cursor-pointer"
-         onclick="openProductModal(this)"
-         data-name="Minyak Zaitun Le Rice"
-         data-long-desc="Minyak zaitun untuk kesehatan dan perawatan.">
-
-        <img src="https://raw.githubusercontent.com/Havis123/Tunas-herbal-/main/Lerice.png"
-             class="w-full h-28 md:h-40 object-contain rounded-lg mb-2">
-
-        <span class="text-xs font-bold text-yellow-700 bg-yellow-100 px-2 py-1 rounded">
-            Produk Minyak
-        </span>
-
-        <h4 class="text-sm md:text-base font-semibold mt-2">
-            Minyak Zaitun Le Rice
-        </h4>
-
-        <p class="text-gray-400 line-through text-xs">Rp 50.000</p>
-        <p class="text-teal-700 font-bold text-sm md:text-base">Rp 45.000</p>
-    </div>
-</div>
 </section>
     
     <!-- Search Section -->
@@ -3258,6 +3311,9 @@ function closeOngkirInfo() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
 }
+
+
+
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">

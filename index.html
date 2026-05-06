@@ -3691,6 +3691,64 @@ function setActiveProduct(button){
     activeProductCard = card;
 }
 
+// ==========================================
+// PENGATURAN 4 SUARA BERBEDA TUNAS HERBAL
+// ==========================================
+
+// 1. Siapkan 4 jenis suara
+const soundPop = new Audio('https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3');     // 1. Pop (Navigasi Umum)
+const soundClick = new Audio('https://assets.mixkit.co/active_storage/sfx/3124/3124-preview.mp3');   // 2. Klik Kayu (Pilih Produk)
+const soundTing = new Audio('https://assets.mixkit.co/active_storage/sfx/1114/1114-preview.mp3');    // 3. Ting (Tambah Keranjang/Beli)
+const soundNotif = new Audio('https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3');   // 4. Notif (Chatbot/Kurangi Barang)
+
+// 2. Fungsi pemutar suara
+function playSound(type) {
+    let audio;
+    if (type === 'pop') audio = soundPop;
+    else if (type === 'click') audio = soundClick;
+    else if (type === 'ting') audio = soundTing;
+    else if (type === 'notif') audio = soundNotif;
+
+    if (audio) {
+        audio.currentTime = 0; 
+        audio.play().catch(err => console.log("Audio diblokir browser:", err));
+    }
+}
+
+// 3. Deteksi otomatis klik di seluruh halaman
+document.body.addEventListener('click', function(event) {
+    
+    // Cari elemen yang diklik (tombol atau kartu produk)
+    const element = event.target.closest('button, .product-card, .logo-anim, [onclick]');
+    
+    if (!element) return; 
+
+    // Ambil isi atribut onclick untuk mendeteksi fungsinya
+    const action = element.getAttribute('onclick') || '';
+
+    // LOGIKA PEMBAGIAN 4 SUARA:
+    
+    // A. Suara "TING" (Tambah Barang & Checkout WA)
+    // Mendeteksi tombol + karena kodenya memiliki angka ', 1,' (changeQtyDirect)
+    if (action.includes('checkoutWhatsApp') || action.includes(', 1,')) { 
+        playSound('ting');
+    } 
+    // B. Suara "NOTIF" (Chatbot, Kurangi Barang, & Reset)
+    // Mendeteksi tombol - karena kodenya memiliki angka ', -1,'
+    else if (action.includes('openChatbot') || action.includes('sendChat') || action.includes(', -1,') || action.includes('resetCart')) {
+        playSound('notif');
+    }
+    // C. Suara "KLIK KAYU" (Lihat Produk & Filter Kategori)
+    else if (element.classList.contains('product-card') || action.includes('filterCategory') || action.includes('openProductModal')) {
+        playSound('click');
+    } 
+    // D. Suara "POP" LEMBUT (Tombol Navigasi Umum: Buka Menu, Tutup Popup, dll)
+    else {
+        playSound('pop');
+    }
+});
+
+
 </script>
 <!-- Product Detail Modal -->
 <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-60 z-[999] hidden items-center justify-center p-4">

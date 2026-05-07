@@ -3388,306 +3388,100 @@ function addMessage(type, text) {
 }
 
 function getBotReply(msg) {
+    // Ubah pesan menjadi huruf kecil agar pencarian kata kunci lebih mudah
     msg = msg.toLowerCase();
-
-    // ===== LAMBUNG =====
-    if (
-        msg.includes("lambung") ||
-        msg.includes("maag") ||
-        msg.includes("asam lambung") ||
-        msg.includes("perih") ||
-        msg.includes("kembung")
-    ) {
-        return "Kalau kamu sedang mengalami masalah lambung seperti maag, perih, atau asam lambung naik, itu memang cukup mengganggu aktivitas sehari-hari 😔\n\n" +
-
-        "Untuk membantu meredakan dan menenangkan lambung, kamu bisa mempertimbangkan beberapa produk berikut:\n\n" +
-
-        "✔ Madu Lambung Asyifa – cocok untuk pemakaian harian\n" +
-        "✔ Madu Lambung Zestmag – untuk lambung sensitif\n" +
-        "✔ Madu Lambung Vitagerd – untuk kondisi yang lebih serius\n" +
-        "✔ Madu Lambung Masambung – membantu meredakan perih & kembung\n" +
-        "✔ Madu Lambung Freshmag – membantu menenangkan lambung\n" +
-        "✔ Madu Lambung Aslamago – menjaga lambung tetap stabil\n\n" +
-
-        "Kalau berkenan, boleh ceritakan keluhanmu lebih detail agar saya bisa bantu pilihkan yang paling sesuai 😊";
-    }
-
-    // ===== BATUK / FLU =====
-if (
-    msg.includes("batuk") ||
-    msg.includes("flu") ||
-    msg.includes("pilek") ||
-    msg.includes("tenggorokan") ||
-    msg.includes("radang")
-) {
-    return "Keluhan batuk, flu, atau tenggorokan memang cukup mengganggu aktivitas sehari-hari 😷\n\n" +
-
-    "Agar rekomendasi lebih tepat, biasanya dibedakan berdasarkan jenis batuk yang dialami:\n\n" +
-
-    "🔹 Batuk kering / tenggorokan gatal:\n" +
-    "• Madu Batuk Asyifa Gurah – membantu meredakan batuk kering & melegakan tenggorokan\n" +
-    "• Madu Batuk HLV – rasa lebih ringan, tidak pedas, cocok untuk anak & dewasa\n\n" +
-
-    "🔹 Batuk berdahak / flu / pilek:\n" +
-    "• Madu Batuk BATGUR – membantu mengencerkan dahak & meredakan batuk\n" +
-    "• Madu Batuk Asyifa 9 in 1 – manfaat lengkap untuk batuk kering & berdahak (paling laris)\n\n" +
-
-    "🔹 Batuk berat / butuh hasil lebih maksimal:\n" +
-    "• Madu Batuk Gurah Fit – formulasi premium, sangat direkomendasikan untuk hasil maksimal\n\n" +
-
-    "🔹 Batuk berkaitan dengan paru-paru / flek:\n" +
-    "• Madu Batuk Parugo – difokuskan untuk membantu masalah paru-paru & flek\n\n" +
-
-    "Kalau boleh tahu, kamu lagi mengalami batuk yang seperti apa? Biar saya bantu pilihkan yang paling cocok 😊";
-}
-
-    // ===== STAMINA =====
-    if (
-        msg.includes("stamina") ||
-        msg.includes("lemas") ||
-        msg.includes("capek") ||
-        msg.includes("ngedrop") ||
-        msg.includes("pria") ||
-        msg.includes("vitalitas")
-    ) {
-        return "Kalau tubuh terasa lemas atau stamina menurun, itu biasanya karena aktivitas yang padat atau kondisi tubuh yang lagi drop 💪\n\n" +
-
-        "Untuk membantu meningkatkan energi dan stamina, kamu bisa coba:\n\n" +
-
-        "✔ Super Top Libido (STL) – membantu meningkatkan vitalitas pria\n" +
-        "✔ Kopi JANTAN ORIGINAL – membantu menambah energi & stamina\n\n" +
-
-        "Kalau mau, kamu bisa ceritakan kondisi yang dirasakan, nanti saya bantu arahkan yang paling cocok 👍";
-    }
-
-    // ===== PEGAL / SENDI =====
-    if (
-        msg.includes("pegal") ||
-        msg.includes("sendi") ||
-        msg.includes("asam urat") ||
-        msg.includes("rematik")
-    ) {
-        return "Kalau sering mengalami pegal, nyeri sendi, atau asam urat, memang bisa mengganggu aktivitas sehari-hari 😣\n\n" +
-
-        "Untuk membantu mengatasi hal tersebut, kamu bisa mempertimbangkan:\n\n" +
-
-        "✔ Assamulin – membantu menjaga kesehatan otot & sendi\n\n" +
-
-        "Kalau keluhannya lebih spesifik, boleh ceritakan ya biar saya bantu lebih tepat 😊";
-    }
-
-    // ===== IMUN =====
-    if (
-        msg.includes("imun") ||
-        msg.includes("daya tahan") ||
-        msg.includes("sering sakit")
-    ) {
-        return "Kalau daya tahan tubuh sedang menurun atau sering sakit, memang penting untuk dijaga dari dalam 💚\n\n" +
-
-        "Beberapa produk yang bisa membantu meningkatkan imun tubuh:\n\n" +
-
-        "✔ Madu Gholiban (500g / 1kg)\n" +
-        "✔ Madu Angkak Darusyifa\n" +
-        "✔ Susu Skygoat\n" +
-        "✔ Susu Etawalin / Etawaku\n\n" +
-
-        "Silakan dipilih sesuai kebutuhan, atau ceritakan kondisi kamu agar saya bantu rekomendasikan yang paling sesuai 😊";
-    }
     
+    let matches = [];
 
-    // ===== TROMBOSIT =====
-    if (
-        msg.includes("trombosit") ||
-        msg.includes("dbd") ||
-        msg.includes("tipes") ||
-        msg.includes("darah") ||
-        msg.includes("platelet") ||
-        msg.includes("angkak")
-    ) {
-        return "Kalau berkaitan dengan trombosit atau pemulihan kondisi tubuh seperti DBD atau tipes, memang perlu perhatian khusus ya 💉\n\n" +
-
-        "Untuk membantu menjaga kesehatan darah, kamu bisa coba:\n\n" +
-
-        "✔ Madu Angkak Darusyifa – membantu meningkatkan trombosit & pemulihan tubuh\n\n" +
-
-        "Jika ada kondisi tambahan, silakan ceritakan agar saya bisa bantu lebih tepat 😊";
+    // 1. LAMBUNG & PENCERNAAN
+    if (msg.match(/lambung|maag|asam lambung|perih|kembung|mual/)) {
+        matches.push("🌿 *Keluhan Lambung & Pencernaan*\nUntuk maag, asam lambung, dan perut kembung, kami rekomendasikan:\n- Madu Lambung Vitagerd (Untuk kronis)\n- Madu Lambung Zestmag / Freshmag / Attaubah\n- Madu Lambung Masambung / Aslamago\n- Madu Lambung Asyifa / HLV (Pemakaian harian ringan)");
     }
 
-    // ===== SUSU / TULANG =====
-    if (
-        msg.includes("tulang") ||
-        msg.includes("susu") ||
-        msg.includes("kalsium")
-    ) {
-        return "Kalau ingin menjaga kesehatan tulang, stamina, dan nutrisi tubuh, konsumsi susu herbal bisa jadi pilihan yang baik 🥛\n\n" +
-
-        "Beberapa rekomendasi yang bisa kamu coba:\n\n" +
-
-        "✔ Susu Skygoat\n" +
-        "✔ Susu Etawalin\n" +
-        "✔ Susu Etawaku\n" +
-        "✔ HNI Etta Goatmilk\n\n" +
-
-        "Silakan pilih sesuai kebutuhan, atau saya bisa bantu rekomendasikan yang paling cocok 😊";
+    // 2. BATUK, FLU, RADANG, PARU-PARU & SINUS
+    if (msg.match(/batuk|flu|pilek|tenggorokan|radang|flek|paru|sesak|dahak/)) {
+        matches.push("😷 *Batuk, Flu & Pernapasan*\nUntuk melegakan pernapasan dan batuk:\n- Madu Batuk Gurah Fit (Premium & Paling Maksimal)\n- Madu Batuk Parugo (Fokus untuk paru-paru & flek)\n- Madu Batuk Asyifa 9 in 1 / BATGUR (Berdahak & Kering)\n- Madu Batuk Mecca Gurah / Herbatuk Sherin / Jasmine F&B / HLV\n- Gurah Fluba Herbalindo (Khusus Sinus & Flu berat)");
     }
 
-    // ===== MINYAK =====
-if (
-    msg.includes("minyak") ||
-    msg.includes("kulit") ||
-    msg.includes("rambut") ||
-    msg.includes("jantung")
-) {
-
-    return "Untuk perawatan kesehatan, kulit, rambut, hingga jantung, kami memiliki beberapa jenis minyak herbal yang bisa disesuaikan dengan kebutuhan kamu 🌿\n\n" +
-
-    "🔹 MINYAK ZAITUN (konsumsi & perawatan)\n" +
-    "✔ Le Rice – kesehatan & perawatan tubuh\n" +
-    "✔ Ath-Thoyyibah – zaitun murni kemasan ekonomis\n" +
-    "✔ Al Arobi – kualitas premium, bisa diminum & luar\n" +
-    "✔ Zevo Zaituna – kapsul praktis untuk konsumsi\n" +
-    "✔ Aroma Therapy – hanya untuk pijat (tidak diminum)\n\n" +
-
-    "🔹 MINYAK VCO (Virgin Coconut Oil)\n" +
-    "✔ VICO Oil – bantu kolesterol & daya tahan tubuh\n" +
-    "✔ VCO Classic UMS – versi besar & lebih hemat\n\n" +
-
-    "🔹 MINYAK BUT-BUT (minyak pijat tradisional)\n" +
-    "✔ Wahida – relaksasi & penghangat tubuh\n" +
-    "✔ Herba Jawi 99 – pijat & pegal linu\n" +
-    "✔ HNI Sinergi – versi lengkap & paling laris\n\n" +
-
-    "👉 Semua produk bisa dipilih sesuai kebutuhan kamu (konsumsi atau pemakaian luar).";
-}
-
-    // ===== MADU UMUM =====
-    if (
-        msg.includes("madu") &&
-        !msg.includes("lambung") &&
-        !msg.includes("batuk")
-    ) {
-        return "Kalau kamu sedang mencari madu murni untuk konsumsi harian, kami punya beberapa pilihan terbaik 🍯\n\n" +
-
-        "✔ Madu Gholiban 500g\n" +
-        "✔ Madu Gholiban 1kg\n" +
-        "✔ Madu Angkak Darusyifa\n\n" +
-
-        "Semua madu kami asli tanpa campuran gula dan cocok untuk menjaga kesehatan tubuh 😊";
+    // 3. TROMBOSIT, DBD, TIPES & PEMULIHAN
+    if (msg.match(/trombosit|dbd|tipes|darah|demam|angkak|pemulihan/)) {
+        matches.push("🩸 *Trombosit & Pemulihan Sakit*\nUntuk menaikkan trombosit dan pemulihan tubuh (DBD/Tipes):\n- Madu Angkak Darusyifa\n- Madu Angkak Trombofito Sherin\n- Sari Kurma Angkak Habbasyifa / Asyifa 8 in 1");
     }
-    // ===== JANTUNG / KOLESTEROL =====
-if (
-    msg.includes("jantung") ||
-    msg.includes("kolesterol") ||
-    msg.includes("darah tinggi") ||
-    msg.includes("hipertensi")
-) {
-    return "❤️ Untuk kesehatan jantung & kolesterol, kamu bisa coba Hiu Cardiocare Herbalindo.";
-}
 
-// ===== GINJAL =====
-if (
-    msg.includes("ginjal") ||
-    msg.includes("kencing batu") ||
-    msg.includes("kencing") ||
-    msg.includes("batu kemih")
-) {
-    return "🟢 Untuk kesehatan ginjal & saluran kemih, kamu bisa coba Bantugin Herbalindo.";
-}
-// ===== PROSTAT =====
-if (
-    msg.includes("prostat") ||
-    msg.includes("kencing tidak lancar") ||
-    msg.includes("pria")
-) {
-    return "🧑‍⚕️ Untuk prostat & kencing, kamu bisa coba HIU PROS Herbalindo.";
-}
+    // 4. OTOT, SENDI, TULANG, ASAM URAT & REMATIK
+    if (msg.match(/tulang|sendi|pegal|linu|asam urat|rematik|kaku|pijat/)) {
+        matches.push("🦴 *Tulang, Sendi & Asam Urat*\nUntuk meredakan nyeri dan menjaga kepadatan tulang:\n- Kapsul Assamulin (Asam urat & Rematik)\n- Susu Kambing Etawalin / Etawaku / HNI Etta Goatmilk\n- Kumis Kucing / Daun Ungu Herbalindo\n- Minyak But But HNI / Wahida / Herba Jawi (Untuk Pijat & Relaksasi)");
+    }
 
-// ===== SINUS / HIDUNG =====
-if (
-    msg.includes("sinus") ||
-    msg.includes("pilek") ||
-    msg.includes("hidung") ||
-    msg.includes("flu")
-) {
-    return "🤧 Untuk sinus & hidung tersumbat, kamu bisa coba Gurah Fluba Herbalindo.";
-}
+    // 5. KOLESTEROL, JANTUNG & HIPERTENSI
+    if (msg.match(/kolesterol|darah tinggi|hipertensi|jantung|lemak darah/)) {
+        matches.push("❤️ *Kesehatan Jantung & Kolesterol*\nUntuk mengontrol tensi dan lemak darah:\n- Koleshiu Herbalindo (Kolesterol)\n- Hiu Cardiocare Herbalindo (Jantung)\n- Neotensi Herbalindo (Darah Tinggi)\n- Madu Pahit (Asyifa Gamat Emas / 6 in 1)");
+    }
 
-// ===== TIDUR =====
-if (
-    msg.includes("tidur") ||
-    msg.includes("insomnia") ||
-    msg.includes("susah tidur")
-) {
-    return "🌙 Untuk membantu tidur lebih nyenyak, kamu bisa coba HIU TDR Herbalindo.";
-}
-// ===== KOLESTEROL =====
-if (
-    msg.includes("lemak") ||
-    msg.includes("kolesterol") ||
-    msg.includes("darah kental")
-) {
-    return "🩸 Untuk kolesterol & lemak darah, kamu bisa coba Koleshiu Herbalindo.";
-}
+    // 6. DIABETES & GULA DARAH
+    if (msg.match(/diabetes|gula|kencing manis|gula darah/)) {
+        matches.push("🩸 *Diabetes & Gula Darah*\nUntuk menstabilkan gula darah:\n- Madu Pahit Asyifa Gamat Emas / Prima Raja\n- Mengkudu Herbalindo\n- Kumis Kucing Herbalindo");
+    }
 
-// ===== WASIR =====
-if (
-    msg.includes("wasir") ||
-    msg.includes("ambeien") ||
-    msg.includes("sembelit")
-) {
-    return "🚽 Untuk wasir & pencernaan, kamu bisa coba Daun Ungu Herbalindo.";
-}
-// ===== PERADANGAN / IMUN =====
-if (
-    msg.includes("kanker") ||
-    msg.includes("miom") ||
-    msg.includes("radang") ||
-    msg.includes("peradangan")
-) {
-    return "🛡️ Untuk dukungan imun & peradangan, kamu bisa coba Karsifit Herbalindo.";
-}
-// ===== GULA DARAH (MENGKUDU FIX) =====
-if (
-    msg.includes("mengkudu") ||
-    msg.includes("gula") ||
-    msg.includes("diabetes") ||
-    msg.includes("kencing manis")
-) {
-    return "🌿 Untuk membantu menjaga gula darah, kamu bisa coba Mengkudu Herbalindo.";
-}
+    // 7. GINJAL & SALURAN KEMIH
+    if (msg.match(/ginjal|kencing batu|batu kemih|saluran kencing|pinggang/)) {
+        matches.push("🟢 *Ginjal & Saluran Kemih*\nUntuk melancarkan kencing dan batu ginjal:\n- Bantugin Herbalindo\n- Kumis Kucing Herbalindo\n- Tempuyung Herbalindo");
+    }
 
-// ===== Kanker) =====
-if (
-    msg.includes("kanker") ||
-    msg.includes("tumor") ||
-    msg.includes("miom") ||
-    msg.includes("radang") ||
-    msg.includes("peradangan")
-) {
-    return "🛡️ Untuk dukungan kesehatan terkait miom, tumor, kanker, dan peradangan, kamu bisa coba Karsifit Herbalindo.";
-}    
-// ===== SINUS =====
-if (
-    msg.includes("sinus") ||
-    msg.includes("mual") ||
-    msg.includes("muntah") ||
-    msg.includes("batuk dan flu")
-) {
-    return "🤒 Untuk demam & gejala flu, kamu bisa coba Gurah Fluba Herbalindo.";
-}
-// ===== Kencing =====
-if (
-    msg.includes("ginjal") ||
-    msg.includes("gangguan kencing") ||
-    msg.includes("nyeri pinggang karena ginjal")
-) {
-    return "🦴 Untuk asam urat & rematik, kamu bisa coba Kumis Kucing Herbalindo.";
+    // 8. PROSTAT (PRIA)
+    if (msg.match(/prostat|kencing tidak lancar/)) {
+        matches.push("🧑‍⚕️ *Kesehatan Prostat*\nUntuk peradangan dan keluhan prostat:\n- HIU PROS Herbalindo");
+    }
+
+    // 9. AMBEIEN & WASIR
+    if (msg.match(/wasir|ambeien|sembelit|susah bab/)) {
+        matches.push("🚽 *Wasir & Pencernaan Bawah*\nUntuk melancarkan BAB dan mengobati wasir:\n- Daun Ungu Herbalindo");
+    }
+
+    // 10. INSOMNIA / TIDUR
+    if (msg.match(/tidur|insomnia|susah tidur/)) {
+        matches.push("🌙 *Kualitas Tidur*\nUntuk membantu tidur lebih nyenyak dan rileks:\n- HIU TDR Herbalindo");
+    }
+
+    // 11. KANKER, MIOM & PERADANGAN
+    if (msg.match(/kanker|tumor|miom|radang|kista/)) {
+        matches.push("🛡️ *Dukungan Imun & Peradangan Dalam*\nUntuk terapi pendamping miom, tumor, atau kanker:\n- Karsifit Herbalindo");
+    }
+
+    // 12. STAMINA PRIA (VITALITAS)
+    if (msg.match(/stamina pria|vitalitas|libido|durasi|kuat|kejantanan/)) {
+        matches.push("⚡ *Stamina Pria Dewasa*\nUntuk performa dan energi pria:\n- Super Top Libido (STL) Kapsul\n- Kopi JANTAN ORIGINAL");
+    }
+
+    // 13. KULIT, RAMBUT & PERAWATAN LUAR
+    if (msg.match(/kulit|rambut|kering|perawatan luar/)) {
+        matches.push("✨ *Perawatan Kulit & Tubuh*\n- Minyak Zaitun Le Rice / Al Arobi / Ath-Thoyyibah\n- Minyak VCO VICO OIL / Classic UMS");
+    }
+
+    // 14. STAMINA UMUM & DAYA TAHAN TUBUH (General)
+    if (msg.match(/imun|daya tahan|stamina|lemas|capek|drop/)) {
+        matches.push("💪 *Imunitas & Stamina Harian*\nUntuk menjaga tubuh agar tidak mudah sakit:\n- Madu Gholiban (Asli Kalimantan)\n- Madu Multiflora An Nahl / ARHAB\n- Susu Kambing Fresh Etawa / AMH\n- Minyak VCO (Bisa diminum)");
+    }
+
+    // ===== OUTPUT LOGIC =====
+    
+    // Jika keluhan cocok dengan kategori di atas
+    if (matches.length > 0) {
+        let finalReply = "Saya menemukan beberapa rekomendasi produk yang pas untuk keluhan Anda:\n\n" + matches.join("\n\n");
+        finalReply += "\n\n💡 _Ketik nama produk di kolom pencarian di atas untuk melihat detail & menambahkannya ke keranjang._";
+        return finalReply;
+    } 
+    
+    // Jika hanya menyapa
+    if (msg.match(/halo|hai|pagi|siang|sore|malam|assalamualaikum|ping|test/)) {
+        return "Waalaikumsalam / Halo! 👋 Selamat datang di Tunas Herbal. Silakan ceritakan keluhan kesehatan Anda, saya akan bantu carikan produk yang paling tepat.";
+    }
+
+    // Default (Jika keluhan tidak dikenali)
+    return "Maaf, saya kurang menangkap maksud Anda. 😔\n\nSilakan sebutkan keluhan Anda secara langsung (Contoh: 'Saya sakit maag', 'Obat untuk batuk berdahak', 'Kolesterol tinggi', atau 'Pegal linu'). Saya siap membantu!";
 }
 
 
-    // ===== DEFAULT =====
-    return "Halo 😊 Silakan ceritakan keluhan atau kebutuhan kamu ya atau kamu bisa langsung mencari produk yang kamu mau di kolom pencarian produk.\n\nContoh:\n- Batuk / flu\n- Maag / lambung\n- Stamina\n- Pegal / sendi\n\nSaya siap bantu rekomendasikan produk yang paling sesuai 👍";
-}
 function scrollToBottom() {
     const footer = document.getElementById('kontak');
     if (footer) {
